@@ -1,0 +1,103 @@
+﻿@import "variables";
+@import "mixins";
+
+
+@font-face {
+    font-family: 'gothman_bgbold';
+    src: url('../Fonts/gothman/Gotham-Bold.eot');
+    src: url('../Fonts/gothman/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/gothman/Gotham-Bold.woff') format('woff'),
+         url('../Fonts/gothman/Gotham-Bold.ttf') format('truetype'),
+         url('../Fonts/gothman/Gotham-Boldt.svg#gothman_bgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'gothman_book';
+    src: url('../Fonts/gothman-book/Gotham-Book.eot');
+    src: url('../Fonts/gothman-book/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/gothman-book/Gotham-Book.woff') format('woff'),
+         url('../Fonts/gothman-book/Gotham-Book.ttf') format('truetype'),
+         url('../Fonts/gothman-book/Gotham-Book.svg#gothman_book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+     font-family: 'gothman_book';
+     font-size:15px;
+    @include breakpoint(xs) {
+      font-size:13px;
+      line-height: 13px;
+    }
+}
+
+/*=====================*/
+//  BASE CLASS
+/*=====================*/
+img {
+    border: none !important;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.rte-pull-left {
+    margin: 0 10px 4px 0;
+    float: left;
+}
+
+.rte-pull-right {
+    margin: 0 0 4px 10px;
+    float: right;
+}
+
+.relative {
+    position: relative;
+}
+
+.cfix:after, .cfix:before {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.cfix:after {
+    clear: both;
+}
+
+.cfix {
+    zoom: 1;
+}
+
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'gothman_bgbold', serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: normal;
+}

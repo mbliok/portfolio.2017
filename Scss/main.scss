@@ -1,0 +1,164 @@
+// @import "bourbon/_bourbon";
+// @import "neat/_neat";
+@import "variables";
+@import "mixins";
+@import "typography";
+
+ .MainMenuPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+  }
+/*=====================*/
+//   COMPONENT BUTTONS
+/*=====================*/
+%_btn-component {
+    display: inline-block;
+    background: none;
+    color: $white;
+    font-family: 'gothman_book';
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 10px 22px;
+    background: purple;// $button-primary;
+}
+
+.btn-component {
+    @extend %_btn-component;
+
+    &--default {
+        @extend %_btn-component;
+        background: red;
+
+        &:hover {
+            background: #4e4e4e;
+        }
+    }
+
+    &--primary {
+        @extend %_btn-component;
+        background: pink;
+
+        &:hover {
+            background: blue;
+            color: $white;
+        }
+    }
+}
+/* =======================
+   ROUTE list-style: none; 
+   ======================= */ 
+  %_route-link{
+      height: 25%;
+      width: 50%;
+
+      a{
+        color:#0f0e0e;
+        text-decoration:none;
+        text-transform:uppercase;
+        
+        h2{
+          font-size: 26vh;
+          margin: 0;
+          display: inline;
+        }
+      }
+  }
+  .route-link{
+     @extend %_route-link;
+
+     &--home {
+        @extend %_route-link;
+          -webkit-animation-duration: 800ms;
+           text-align:right;
+           width: 100%;
+     }
+     &--work {
+        @extend %_route-link;
+          -webkit-animation-duration: 1000ms;
+     }
+     &--bio {
+        @extend %_route-link;
+          -webkit-animation-duration: 1200ms;
+           text-align:right;
+           width: 100%;
+     }
+     &--info {
+        @extend %_route-link;
+          -webkit-animation-duration: 1400ms;
+     }
+  }
+ /* =======================
+   COLUMN TEMPLATE 
+   ======================= */ 
+%_panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.panel {
+    @extend %_panel;
+
+    &--left {
+        @extend %_panel;
+         left: 0;
+         top: 0;
+    }
+     &--right {
+        @extend %_panel;
+         right: 0;
+         top: 0;
+
+         
+    }
+}
+.panel-fade{
+   -webkit-animation-duration: 2000ms;
+  -webkit-animation-delay: 500ms;
+}
+.recent-work{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: table;
+    
+    h4{
+      color:gray;
+    }
+    ul{
+      li{
+        a{
+          position: relative;
+          display: inline-block;
+          width: 480px;
+          border-top: 1px solid #333637;
+          padding:24px;
+          font-weight: 400;
+          box-sizing: border-box;
+          text-decoration: none;
+          color:$white;
+          font-size: 20px;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    & .list {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 40px;
+    }
+  }
+
+
