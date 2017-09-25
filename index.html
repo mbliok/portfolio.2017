@@ -60,15 +60,19 @@
                 <div class="recent-work panel-fade animated fadeIn">
                     <div class="list">
                         <h4>Recent Work</h4>
+
                         <ul class="character-list-container"></ul>
 
                         <script id="character-template" type="text/x-handlebars-template">
                             {{#each characters}}
                             <li class="character">
+                                <!--formateName prop1 prop2-->
+                                {{formateName description technology.name}}
                                 <h2><a href="">name {{name}}</a></h2>
                                 <div class="cols-2">
                                     <p>title {{titleCode}}</p>
                                     {{#if description}}<div>descr {{description}}</div>{{/if}}
+                                    {{#if technology}}<small>{{technology.name}}</small>{{/if}}
                                 </div>
                             </li>
                             {{/each}}
