@@ -68,7 +68,7 @@
                                 <h2><a href="">name {{name}}</a></h2>
                                 <div class="cols-2">
                                     <p>title {{titleCode}}</p>
-                                    <div>descr {{description}}</div>
+                                    {{#if description}}<div>descr {{description}}</div>{{/if}}
                                 </div>
                             </li>
                             {{/each}}
