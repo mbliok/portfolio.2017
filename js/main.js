@@ -1,17 +1,44 @@
-Handlebars.registerHelper("formateName", function (prop1,prop2) { // (name and callback funk)
+function getProjectById(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\/\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g,""));
+}
+
+Handlebars.registerHelper("formateName", function (prop1, prop2) { // (name and callback funk)
     // return "My custom helper" + prop1 + "and " + prop2
     return new Handlebars.SafeString(
         "My custom helper <strong>" + prop1 + "</strong>and<strong> " + prop2 + "</strong>"
         )
 })
 
+Handlebars.registerHelper("makeBold", function (options) {
+    return new Handlebars.SafeString("<strong>" + options.fn(this) + "</strong>");
+})
+
+Handlebars.registerHelper("toLower", function (options) {
+    return options.fn(this).toLowerCase();
+})
+
 $(document).ready(function () {
     // create referanxce to list template
     var charactersTemplate = $('#character-template').html();
     var compiledTemplate = Handlebars.compile(charactersTemplate);
+    var $characterList = $('.character-list-container')
+    var projectId = getProjectById("id");
+
     $.ajax('./data/cast.json').done(function (cast) {
         console.log(cast);
-        $('.character-list-container').html(compiledTemplate(cast))
+        if ($('body').hasClass('page-details')) {
+            $characterList.html(compiledTemplate(cast.characters[projectId]))
+        } else {
+            $characterList.html(compiledTemplate(cast))
+        }
+
+
     })
 
 

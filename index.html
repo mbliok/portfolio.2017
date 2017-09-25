@@ -19,7 +19,7 @@
     <link href="Styles/main.css" rel="stylesheet">
 </head>
 
-<body class="fixed-left widescreen mobile">
+<body class="">
 
     <!-- Begin page -->
     <div id="welcome-screen">
@@ -68,11 +68,11 @@
                             <li class="character">
                                 <!--formateName prop1 prop2-->
                                 {{formateName description technology.name}}
-                                <h2><a href="">name {{name}}</a></h2>
+                               <a href="details.html?id={{id}}">View details {{#makeBold}}{{name}}{{/makeBold}}</a>
                                 <div class="cols-2">
                                     <p>title {{titleCode}}</p>
                                     {{#if description}}<div>descr {{description}}</div>{{/if}}
-                                    {{#if technology}}<small>{{technology.name}}</small>{{/if}}
+                                    {{#if technology}}<small>{{#toLower}}{{technology.name}}{{/toLower}}</small>{{/if}}
                                 </div>
                             </li>
                             {{/each}}
