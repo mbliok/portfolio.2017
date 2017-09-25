@@ -25,12 +25,12 @@ Handlebars.registerHelper("toLower", function (options) {
 
 $(document).ready(function () {
     // create referanxce to list template
-    var charactersTemplate = $('#character-template').html();
+    var charactersTemplate = $('#project-template').html();
     var compiledTemplate = Handlebars.compile(charactersTemplate);
-    var $characterList = $('.character-list-container')
+    var $characterList = $('.project-list')
     var projectId = getProjectById("id");
 
-    $.ajax('./data/cast.json').done(function (cast) {
+    $.ajax('./data/projects.json').done(function (cast) {
         console.log(cast);
         if ($('body').hasClass('page-details')) {
             $characterList.html(compiledTemplate(cast.characters[projectId]))
