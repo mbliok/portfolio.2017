@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald');
+
 .slide-menu {
     position: fixed;
     top: 0;
@@ -220,9 +221,14 @@
     }
 }
 
-.panel-fade {
+.fade-duration {
     -webkit-animation-duration: 2000ms;
     -webkit-animation-delay: 500ms;
+}
+
+.fade-duration-more {
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-delay: 1000ms;
 }
 
 .recent-work {
@@ -263,5 +269,32 @@
         text-align: center;
         font-size: 16px;
         padding-bottom: 40px;
+    }
+}
+//project detail
+.project-item {
+    position: relative;
+    width: calc(100vw - 120px);
+    background: pink;
+}
+
+.project-header {
+    height: 100vh;
+    min-height: 600px;
+    background: #ccc;
+    position: relative;
+
+    & .project-item-title {
+        background: #000;
+        height: 100vh;
+        
+        h2 {
+        }
+    }
+
+    & .btn-hamburger--dark {
+        position: fixed;
+        right: 26px;
+        top: 25px;
     }
 }

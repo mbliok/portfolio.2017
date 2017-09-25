@@ -1,0 +1,34 @@
+﻿{
+  "characters": [
+    {
+      "id": 0,
+      "name": "text 1",
+      "titleProject": "title 1",
+      "description": "desc 1",
+      "technology": {
+        "name": "Angular"
+      },
+      "bio": " Handlebars Training: Drilling into data",
+      "imgUrl": "./img/img_0.jpg"
+    },
+    {
+      "id": 1,
+      "name": "text 2",
+      "titleProject": "title 2",
+      "description": "desc 2",
+      "technology": {
+        "name": "Vue"
+      },
+      "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "imgUrl": "./img/img_0.jpg"
+    },
+    {
+      "id": 2,
+      "name": "text 3",
+      "titleProject": "title 3",
+      "description": "",
+      "bio": "Bio info",
+      "imgUrl": "./img/img_0.jpg"
+    }
+  ]
+}

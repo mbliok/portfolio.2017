@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Details</title>
+    <!-- Anim,ate css  CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
+    <!-- Bootstrap css  CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+    <!--<link href="css/default.css" rel="stylesheet" />-->
+    <link href="Styles/main.css" rel="stylesheet">
+</head>
+
+<body class="page-details">
+
+    <div class="project-item animated bounceInLeft">
+
+
+        <section class="project-list"></section>
+
+        <script id="project-template" type="text/x-handlebars-template">
+            <div class="project-header row">
+                <a href="index.html">
+                    <div class="btn-hamburger--dark fade-duration-more animated fadeIn">
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </div>
+                </a>
+                <div class="panel--right">
+                    <div class="project-item-title">
+                        <h2>title {{titleProject}}</h2>
+                        {{#if description}}<div>descr {{description}}</div>{{/if}}
+                        {{#if technology}}<small>{{#toLower}}{{technology.name}}{{/toLower}}</small>{{/if}}
+                    </div>
+                </div>
+                <div class="panel--left">
+                    <img class="someClass" src="{{imgUrl}}">
+                </div>
+            </div>
+            <div class="project-description">Bio: {{bio}}</div>
+
+
+        </script>
+
+
+
+
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 js  CDN -->
+    <!--<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>-->
+    <!--plugins-->
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

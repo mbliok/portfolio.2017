@@ -86,7 +86,8 @@ img {
 h1, h2, h3, h4, h5 {
   font-weight: 400;
   font-size: 26px;
-  line-height: normal; }
+  line-height: normal;
+  font-family: 'Open Sans Condensed', sans-serif; }
 
 .slide-menu {
   position: fixed;
@@ -222,9 +223,13 @@ h1, h2, h3, h4, h5 {
   right: 0;
   top: 0; }
 
-.panel-fade {
+.fade-duration {
   -webkit-animation-duration: 2000ms;
   -webkit-animation-delay: 500ms; }
+
+.fade-duration-more {
+  -webkit-animation-duration: 3000ms;
+  -webkit-animation-delay: 1000ms; }
 
 .recent-work {
   position: relative;
@@ -253,3 +258,21 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     font-size: 16px;
     padding-bottom: 40px; }
+
+.project-item {
+  position: relative;
+  width: calc(100vw - 120px);
+  background: pink; }
+
+.project-header {
+  height: 100vh;
+  min-height: 600px;
+  background: #ccc;
+  position: relative; }
+  .project-header .project-item-title {
+    background: #000;
+    height: 100vh; }
+  .project-header .btn-hamburger--dark {
+    position: fixed;
+    right: 26px;
+    top: 25px; }

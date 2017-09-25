@@ -29,8 +29,8 @@
             <span class="icon-bar bottom-bar"></span>
         </div>
         <div class="slide-menu">
-            <aside class="panel--left">left
-                <!--<div class="route-link--home animated  slideInDown">
+            <aside class="panel--left">
+                <div class="route-link--home animated  slideInDown">
                     <a href="#">
                         <h2>emoh</h2>
                     </a>
@@ -49,7 +49,7 @@
                     <a href="#">
                         <h2>ofin</h2>
                     </a>
-                </div>-->
+                </div>
             </aside>
             <aside class="panel--right">
                 <div class="btn-hamburger--white collapsed">
@@ -57,7 +57,7 @@
                     <span class="icon-bar middle-bar"></span>
                     <span class="icon-bar bottom-bar"></span>
                 </div>
-                <div class="recent-work panel-fade animated fadeIn">
+                <div class="recent-work fade-duration animated fadeIn">
                     <div class="list">
                         <h4>Recent Work</h4>
 
@@ -71,7 +71,7 @@
                                 <!-- details.html?id={{id}} -->
                                <a href="details.html?id={{@index}}">View details {{#makeBold}}{{name}}{{/makeBold}}</a>
                                 <div class="cols-2">
-                                    <p>title {{titleCode}}</p>
+                                    <p>title {{titleProject}}</p>
                                     {{#if description}}<div>descr {{description}}</div>{{/if}}
                                     {{#if technology}}<small>{{#toLower}}{{technology.name}}{{/toLower}}</small>{{/if}}
                                 </div>
