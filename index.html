@@ -9,12 +9,12 @@
     <meta name="author" content="">
     <title>Home</title>
     <!-- Anim,ate css  CDN -->
-     <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <!-- Bootstrap css  CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
+          crossorigin="anonymous">
     <!--<link href="css/default.css" rel="stylesheet" />-->
     <link href="Styles/main.css" rel="stylesheet">
 </head>
@@ -22,40 +22,76 @@
 <body class="fixed-left widescreen mobile">
 
     <!-- Begin page -->
-    <div id="wrapper">
-          <div class="MainMenuPopup">
-    <aside class="panel--left">
-        <div class="route-link--home animated  slideInDown"><router-link to="/" >
-      <h2>emoh</h2>
-        </router-link></div>
-        <div class="route-link--work animated  slideInDown">
-          <router-link to="/work" ><h2>krow</h2></router-link></div>
-        <div class="route-link--bio animated  slideInDown"><router-link to="/bio" ><h2>oib</h2></router-link></div>
-        <div class="route-link--info animated  slideInDown"><router-link to="/" ><h2>ofin</h2></router-link></div>
-    </aside>
-    <aside class="panel--right">
-        <button v-on:click="$parent.$emit('emit-this-event')">x</button>
-        <div class="recent-work panel-fade animated fadeIn">
-          <div class="list">
-          <h4>Recent Work</h4>
-          <list></list>
-          </div>
+    <div id="welcome-screen">
+        <div class="btn-hamburger--dark collapsed">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
         </div>
-     
-    </aside>
+        <div class="slide-menu">
+            <aside class="panel--left">left
+                <!--<div class="route-link--home animated  slideInDown">
+                    <a href="#">
+                        <h2>emoh</h2>
+                    </a>
+                </div>
+                <div class="route-link--work animated  slideInDown">
+                    <a href="#">
+                        <h2>krow</h2>
+                    </a>
+                </div>
+                <div class="route-link--bio animated  slideInDown">
+                    <a href="#">
+                        <h2>oib</h2>
+                    </a>
+                </div>
+                <div class="route-link--info animated  slideInDown">
+                    <a href="#">
+                        <h2>ofin</h2>
+                    </a>
+                </div>-->
+            </aside>
+            <aside class="panel--right">
+                <div class="btn-hamburger--white collapsed">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </div>
+                <div class="recent-work panel-fade animated fadeIn">
+                    <div class="list">
+                        <h4>Recent Work</h4>
+                        <ul class="character-list-container"></ul>
 
-   
-  
-  </div>
+                        <script id="character-template" type="text/x-handlebars-template">
+                            {{#each characters}}
+                            <li class="character">
+                                <h2><a href="">name {{name}}</a></h2>
+                                <div class="cols-2">
+                                    <p>title {{titleCode}}</p>
+                                    <div>descr {{description}}</div>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </script>
+
+
+
+                    </div>
+                </div>
+
+            </aside>
+
+
+
+        </div>
     </div>
     <!-- scripts -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
     <!-- Bootstrap 4 js  CDN -->
-    <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+    <!--<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>-->
     <!--plugins-->
     <!-- Main js -->
     <script src="js/main.js"></script>

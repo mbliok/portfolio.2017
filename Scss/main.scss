@@ -1,10 +1,12 @@
-// @import "bourbon/_bourbon";
-// @import "neat/_neat";
+@import "bourbon/_bourbon";
+@import "neat/_neat";
 @import "variables";
 @import "mixins";
 @import "typography";
 
- .MainMenuPopup {
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald');
+.slide-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +15,98 @@
     z-index: 100;
     background: #000;
     color: #fff;
-  }
+    display: none;
+
+    & .btn-hamburger--white {
+        float: right;
+        margin: 25px 25px 0 0;
+    }
+}
+
+#welcome-screen {
+    & .btn-hamburger--dark {
+        margin: 25px 0 0 25px;
+    }
+}
+/* Navigation animated button
+-------------------------------------------------- */
+%_btn-hamburger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: none;
+    cursor: pointer;
+
+    .icon-bar {
+        width: 30px;
+        transition: all 0.2s;
+        height: 4px;
+        border-radius: 0;
+        margin-bottom: 4px;
+        display: block;
+    }
+
+    & .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    & .middle-bar {
+        opacity: 0;
+    }
+
+    & .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    &.collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    &.collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    &.collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+}
+
+.btn-hamburger {
+    @extend %_btn-hamburger;
+
+    &--white {
+        @extend %_btn-hamburger;
+
+        &:hover {
+
+            .icon-bar {
+                background: #4e4e4e;
+            }
+        }
+
+        .icon-bar {
+            background: $white;
+        }
+    }
+
+    &--dark {
+        @extend %_btn-hamburger;
+
+        &:hover {
+
+            .icon-bar {
+                background: #222;
+            }
+        }
+
+        .icon-bar {
+            background: $dark;
+        }
+    }
+}
+
 /*=====================*/
 //   COMPONENT BUTTONS
 /*=====================*/
@@ -26,7 +119,7 @@
     border: none;
     cursor: pointer;
     padding: 10px 22px;
-    background: purple;// $button-primary;
+    background: purple; // $button-primary;
 }
 
 .btn-component {
@@ -53,50 +146,57 @@
 }
 /* =======================
    ROUTE list-style: none; 
-   ======================= */ 
-  %_route-link{
-      height: 25%;
-      width: 50%;
+   ======================= */
+%_route-link {
+    height: 25%;
+    width: 50%;
+    font-family: 'Oswald', sans-serif;
 
-      a{
-        color:#0f0e0e;
-        text-decoration:none;
-        text-transform:uppercase;
-        
-        h2{
-          font-size: 26vh;
-          margin: 0;
-          display: inline;
+    a {
+        color: #0f0e0e;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        h2 {
+            font-size: 26vh;
+            font-weight: 600;
+            margin: 0;
+            display: inline;
+            font-family: 'Oswald Light', sans-serif;
         }
-      }
-  }
-  .route-link{
-     @extend %_route-link;
+    }
+}
 
-     &--home {
+.route-link {
+    @extend %_route-link;
+
+    &--home {
         @extend %_route-link;
-          -webkit-animation-duration: 800ms;
-           text-align:right;
-           width: 100%;
-     }
-     &--work {
+        -webkit-animation-duration: 800ms;
+        text-align: right;
+        width: 100%;
+    }
+
+    &--work {
         @extend %_route-link;
-          -webkit-animation-duration: 1000ms;
-     }
-     &--bio {
+        -webkit-animation-duration: 1000ms;
+    }
+
+    &--bio {
         @extend %_route-link;
-          -webkit-animation-duration: 1200ms;
-           text-align:right;
-           width: 100%;
-     }
-     &--info {
+        -webkit-animation-duration: 1200ms;
+        text-align: right;
+        width: 100%;
+    }
+
+    &--info {
         @extend %_route-link;
-          -webkit-animation-duration: 1400ms;
-     }
-  }
- /* =======================
+        -webkit-animation-duration: 1400ms;
+    }
+}
+/* =======================
    COLUMN TEMPLATE 
-   ======================= */ 
+   ======================= */
 %_panel {
     position: absolute;
     width: 50%;
@@ -109,49 +209,54 @@
 
     &--left {
         @extend %_panel;
-         left: 0;
-         top: 0;
+        left: 0;
+        top: 0;
     }
-     &--right {
-        @extend %_panel;
-         right: 0;
-         top: 0;
 
-         
+    &--right {
+        @extend %_panel;
+        right: 0;
+        top: 0;
     }
 }
-.panel-fade{
-   -webkit-animation-duration: 2000ms;
-  -webkit-animation-delay: 500ms;
+
+.panel-fade {
+    -webkit-animation-duration: 2000ms;
+    -webkit-animation-delay: 500ms;
 }
-.recent-work{
+
+.recent-work {
     position: relative;
     width: 100%;
     height: 100%;
     display: table;
-    
-    h4{
-      color:gray;
+
+    h4 {
+        color: gray;
+        font-family: 'Open Sans Condensed', sans-serif;
     }
-    ul{
-      li{
-        a{
-          position: relative;
-          display: inline-block;
-          width: 480px;
-          border-top: 1px solid #333637;
-          padding:24px;
-          font-weight: 400;
-          box-sizing: border-box;
-          text-decoration: none;
-          color:$white;
-          font-size: 20px;
-          &:hover{
-            text-decoration: underline;
-          }
+
+    ul {
+        li {
+            a {
+                position: relative;
+                display: inline-block;
+                width: 480px;
+                border-top: 1px solid #333637;
+                padding: 24px;
+                font-weight: 400;
+                box-sizing: border-box;
+                text-decoration: none;
+                color: $white;
+                font-size: 20px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
-      }
     }
+
     & .list {
         display: table-cell;
         vertical-align: middle;
@@ -159,6 +264,4 @@
         font-size: 16px;
         padding-bottom: 40px;
     }
-  }
-
-
+}
