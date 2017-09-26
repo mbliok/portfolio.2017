@@ -5,7 +5,7 @@ function getProjectById(name, url) {
     results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g,""));
+    return decodeURIComponent(results[2].replace(/\+/g, ""));
 }
 
 Handlebars.registerHelper("formateName", function (prop1, prop2) { // (name and callback funk)
@@ -19,8 +19,8 @@ Handlebars.registerHelper("makeBold", function (options) {
     return new Handlebars.SafeString("<strong>" + options.fn(this) + "</strong>");
 })
 
-Handlebars.registerHelper("toLower", function (options) {
-    return options.fn(this).toLowerCase();
+Handlebars.registerHelper("toUpper", function (options) {
+    return options.fn(this).toUpperCase();
 })
 
 $(document).ready(function () {

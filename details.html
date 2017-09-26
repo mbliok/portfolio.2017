@@ -36,17 +36,21 @@
                     </div>
                 </a>
                 <div class="panel--right">
-                    <div class="project-item-title">
-                        <h2>title {{titleProject}}</h2>
-                        {{#if description}}<div>descr {{description}}</div>{{/if}}
-                        {{#if technology}}<small>{{#toLower}}{{technology.name}}{{/toLower}}</small>{{/if}}
+                    <div class="project-item-title text-white">
+                        <div class="table-container">
+                            <div class="table-center">
+                                <h2>{{#toUpper}}{{titleProject}}{{/toUpper}}</h2>
+                                {{#if shortDescription}}<div class="short-description">{{shortDescription}}</div>{{/if}}
+                                {{#if technologies}}<span class="technology">{{technologies.name}}</span>{{/if}}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="panel--left">
                     <img class="someClass" src="{{imgUrl}}">
                 </div>
             </div>
-            <div class="project-description">Bio: {{bio}}</div>
+            <div class="project-description">Project key: {{projectSpecification}}</div>
 
 
         </script>

@@ -49,13 +49,8 @@ img {
 .pull-right {
   float: right; }
 
-.rte-pull-left {
-  margin: 0 10px 4px 0;
-  float: left; }
-
-.rte-pull-right {
-  margin: 0 0 4px 10px;
-  float: right; }
+.text-white {
+  color: #fff; }
 
 .relative {
   position: relative; }
@@ -272,6 +267,29 @@ h1, h2, h3, h4, h5 {
   .project-header .project-item-title {
     background: #000;
     height: 100vh; }
+    .project-header .project-item-title h2 {
+      font-family: 'Oswald Light', sans-serif;
+      font-size: 88px;
+      font-weight: 900;
+      line-height: 67px;
+      letter-spacing: -12px;
+      color: #fff; }
+    .project-header .project-item-title .short-description {
+      margin-top: 60px;
+      font-size: 18px;
+      max-width: 70%; }
+    .project-header .project-item-title .technology {
+      margin-top: 60px;
+      display: block; }
+  .project-header .table-container {
+    display: table;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed; }
+  .project-header .table-center {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 60px; }
   .project-header .btn-hamburger--dark {
     position: fixed;
     right: 26px;

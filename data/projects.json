@@ -2,32 +2,38 @@
   "characters": [
     {
       "id": 0,
-      "name": "text 1",
-      "titleProject": "title 1",
-      "description": "desc 1",
-      "technology": {
-        "name": "Angular"
+      "name": "Evala",
+      "link": "",
+      "titleProject": "Silva",
+      "shortDescription": "A web app that makes it easy for you to connect and share messages with your colleagues.",
+      "technologies": {
+        "name": "Vue js, Webpack, Eslint, SASS, Bootstrap, vue-cli"
       },
-      "bio": " Handlebars Training: Drilling into data",
+      "projectSpecification": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
       "imgUrl": "./img/img_0.jpg"
     },
     {
       "id": 1,
-      "name": "text 2",
-      "titleProject": "title 2",
-      "description": "desc 2",
-      "technology": {
-        "name": "Vue"
+      "name": "Bexio",
+       "link": "",
+      "titleProject": "Rehio accountant cockpit",
+      "shortDescription": "Responsive web application for accountant management and client invitation",
+      "technologies": {
+        "name": "Angular 1 Angular Material Gulp Bower"
       },
-      "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "projectSpecification": " Handlebars Training: Drilling into data",
       "imgUrl": "./img/img_0.jpg"
     },
     {
       "id": 2,
-      "name": "text 3",
-      "titleProject": "title 3",
-      "description": "",
-      "bio": "Bio info",
+      "name": "AMOrisk",
+      "link": "https://www.amorisk.com/",
+      "titleProject": "amo risk",
+      "shortDescription": "Risk Management System for planned purchases of materials",
+      "technologies": {
+        "name": "Java Script, jQuery, Razor, html SASS, Gulp"
+      },
+      "projectSpecification": "projectSpecification",
       "imgUrl": "./img/img_0.jpg"
     }
   ]

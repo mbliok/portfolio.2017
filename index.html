@@ -67,13 +67,13 @@
                             {{#each characters}}
                             <li class="character">
                                 <!--formateName prop1 prop2-->
-                                {{formateName description technology.name}}
+                                <!--{{formateName shortDescription technologies.name}}-->
                                 <!-- details.html?id={{id}} -->
                                <a href="details.html?id={{@index}}">View details {{#makeBold}}{{name}}{{/makeBold}}</a>
                                 <div class="cols-2">
-                                    <p>title {{titleProject}}</p>
-                                    {{#if description}}<div>descr {{description}}</div>{{/if}}
-                                    {{#if technology}}<small>{{#toLower}}{{technology.name}}{{/toLower}}</small>{{/if}}
+                                    <p>{{titleProject}}</p>
+                                   <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
+                                    <!--{{#if technologies}}<small>{{#toLower}}{{technologies.name}}{{/toLower}}</small>{{/if}}-->
                                 </div>
                             </li>
                             {{/each}}

@@ -287,9 +287,39 @@
     & .project-item-title {
         background: #000;
         height: 100vh;
-        
+
         h2 {
+            font-family: 'Oswald Light', sans-serif;
+            font-size: 88px;
+            font-weight: 900;
+            line-height: 67px;
+            letter-spacing: -12px;
+            color: $white;
         }
+
+        .short-description {
+            margin-top: 60px;
+            font-size: 18px;
+            max-width: 70%;
+        }
+
+        .technology {
+            margin-top: 60px;
+            display: block;
+        }
+    }
+
+    & .table-container {
+        display: table;
+        height: 100%;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    & .table-center {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 60px;
     }
 
     & .btn-hamburger--dark {
