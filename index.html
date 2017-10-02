@@ -31,23 +31,23 @@
         <div class="slide-menu">
             <aside class="panel--left">
                 <div class="route-link--home animated  slideInDown">
-                    <a href="#">
-                        <h2>emoh</h2>
+                    <a href="index.html">
+                        <h2>home</h2>
                     </a>
                 </div>
                 <div class="route-link--work animated  slideInDown">
-                    <a href="#">
-                        <h2>krow</h2>
+                    <a href="details.html?id=0">
+                        <h2>work</h2>
                     </a>
                 </div>
                 <div class="route-link--bio animated  slideInDown">
-                    <a href="#">
-                        <h2>oib</h2>
+                    <a href="bio.html">
+                        <h2>bio</h2>
                     </a>
                 </div>
                 <div class="route-link--info animated  slideInDown">
                     <a href="#">
-                        <h2>ofin</h2>
+                        <h2>info</h2>
                     </a>
                 </div>
             </aside>
@@ -57,21 +57,21 @@
                     <span class="icon-bar middle-bar"></span>
                     <span class="icon-bar bottom-bar"></span>
                 </div>
-                <div class="recent-work fade-duration animated fadeIn">
+                <div class="recent-work fade-d--2000 animated fadeIn">
                     <div class="list">
                         <h4>Recent Work</h4>
 
                         <ul class="project-list"></ul>
 
                         <script id="project-template" type="text/x-handlebars-template">
-                            {{#each characters}}
+                            {{#each projects}}
                             <li class="character">
                                 <!--formateName prop1 prop2-->
                                 <!--{{formateName shortDescription technologies.name}}-->
                                 <!-- details.html?id={{id}} -->
-                               <a href="details.html?id={{@index}}">View details {{#makeBold}}{{name}}{{/makeBold}}</a>
-                                <div class="cols-2">
-                                    <p>{{titleProject}}</p>
+                               <a href="details.html?id={{@index}}">{{titleProject}}</a>
+                                <span class="year">{{year}}</span>
+                                <div>
                                    <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
                                     <!--{{#if technologies}}<small>{{#toLower}}{{technologies.name}}{{/toLower}}</small>{{/if}}-->
                                 </div>

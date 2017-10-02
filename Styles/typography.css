@@ -22,11 +22,13 @@
   font-weight: normal;
   font-style: normal; }
 
-body {
+body, html {
   font-family: 'gothman_book';
-  font-size: 15px; }
+  font-size: 15px;
+  height: 100%;
+  background: #000; }
   @media (max-width: 767px) {
-    body {
+    body, html {
       font-size: 13px;
       line-height: 13px; } }
 
@@ -34,6 +36,10 @@ body {
 /*=====================*/
 img {
   border: none !important; }
+
+.underline {
+  text-decoration: underline;
+  color: #fff; }
 
 .pull-left {
   float: left; }

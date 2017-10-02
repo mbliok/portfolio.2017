@@ -30,9 +30,11 @@
     font-style: normal;
 }
 
-body {
+body, html {
     font-family: 'gothman_book';
     font-size: 15px;
+    height: 100%;
+    background: $dark;
 
     @include breakpoint(xs) {
         font-size: 13px;
@@ -46,7 +48,10 @@ body {
 img {
     border: none !important;
 }
-
+.underline{
+    text-decoration:underline;
+    color:$white;
+}
 .pull-left {
     float: left;
 }

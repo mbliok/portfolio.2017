@@ -29,7 +29,7 @@
         <script id="project-template" type="text/x-handlebars-template">
             <div class="project-header row">
                 <a href="index.html">
-                    <div class="btn-hamburger--dark fade-duration-more animated fadeIn">
+                    <div class="btn-hamburger--dark fade-d--3000 animated fadeIn">
                         <span class="icon-bar top-bar"></span>
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
@@ -42,17 +42,47 @@
                                 <h2>{{#toUpper}}{{titleProject}}{{/toUpper}}</h2>
                                 {{#if shortDescription}}<div class="short-description">{{shortDescription}}</div>{{/if}}
                                 {{#if technologies}}<span class="technology">{{technologies.name}}</span>{{/if}}
+                                <span class="date-creation">{{year}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="panel--left">
-                    <img class="someClass" src="{{imgUrl}}">
+                    <img class="someClass" src="{{imgUrl}}" style="height: 100%;">
                 </div>
             </div>
-            <div class="project-description">Project key: {{projectSpecification}}</div>
+            <section class="project-description cfix">
+                <aside class="project-text-left">
+                    {{projectSpecification.leftColumn}}
 
+                </aside>
+                <aside class="project-text-right">
+                    {{projectSpecification.rightColumn}}
+                    {{#if link}}<a href="{{link}}" alt="{{link}}" target="_blank">View online</a>
+                    {{else}}<p>Access to project is only for authorized persons.</p>{{/if}}
+                </aside>
+                <aside class="project-text-key-skils text-center">
+                    <strong>Technologies:</strong>
+                    <img src="img/icon-code.png" />
+                    {{technologies.name}}
+                </aside>
 
+            </section>
+            <section class="project-screens cfix">
+                <div class="full-width">
+                    <img src="img/test.jpg" />
+                </div>
+                <div class="half-width">
+                    <img src="img/test.jpg" />
+                    <img src="img/test.jpg" />
+                    <img src="img/test.jpg" />
+                    <img src="img/test.jpg" />
+                </div>
+            </section>
+            <section class="project-next cfix">
+                <small>View next</small>
+
+            </section>
         </script>
 
 

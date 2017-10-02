@@ -1,6 +1,7 @@
 function getProjectById(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\/\]]/g, "\\$&");
+    console.log(name + url + '5555');
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
     results = regex.exec(url);
     if (!results) return null;
@@ -25,17 +26,18 @@ Handlebars.registerHelper("toUpper", function (options) {
 
 $(document).ready(function () {
     // create referanxce to list template
-    var charactersTemplate = $('#project-template').html();
-    var compiledTemplate = Handlebars.compile(charactersTemplate);
-    var $characterList = $('.project-list')
+    var projectsTemplate = $('#project-template').html();
+    var compiledTemplate = Handlebars.compile(projectsTemplate);
+    var $projectsList = $('.project-list')
     var projectId = getProjectById("id");
+    console.log(projectId + 'is the prj id')
 
     $.ajax('./data/projects.json').done(function (cast) {
         console.log(cast);
         if ($('body').hasClass('page-details')) {
-            $characterList.html(compiledTemplate(cast.characters[projectId]))
+            $projectsList.html(compiledTemplate(cast.projects[projectId]))
         } else {
-            $characterList.html(compiledTemplate(cast))
+            $projectsList.html(compiledTemplate(cast))
         }
 
 
