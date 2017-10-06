@@ -145,6 +145,19 @@
         }
     }
 }
+//
+.btn-rounded {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    border-radius: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 22px;
+}
 /* =======================
    ROUTE list-style: none; 
    ======================= */
@@ -300,6 +313,12 @@
     }
 }
 //project detail
+.sidebar-share {
+    position: fixed;
+    right: 0;
+    writing-mode: tb-rl;
+}
+
 .project-item {
     position: relative;
     width: calc(100vw - 120px);
@@ -445,6 +464,25 @@
 
         & p:first-child {
             margin-left: -18%;
+        }
+    }
+}
+
+.project-list {
+    position: relative;
+
+    ul.social {
+        position: absolute;
+        right: -73px;
+        top: 26%;
+
+        li {
+            list-style-type: none;
+
+            a {
+                i {
+                }
+            }
         }
     }
 }

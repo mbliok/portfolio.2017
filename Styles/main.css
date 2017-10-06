@@ -33,8 +33,7 @@ html {
 body, html {
   font-family: 'gothman_book';
   font-size: 15px;
-  height: 100%;
-  background: #000; }
+  height: 100%; }
   @media (max-width: 767px) {
     body, html {
       font-size: 13px;
@@ -171,6 +170,18 @@ h1, h2, h3, h4, h5 {
   background: blue;
   color: #fff; }
 
+.btn-rounded {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  border-radius: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 22px; }
+
 /* =======================
    ROUTE list-style: none; 
    ======================= */
@@ -270,6 +281,11 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     font-size: 16px;
     padding-bottom: 40px; }
+
+.sidebar-share {
+  position: fixed;
+  right: 0;
+  writing-mode: tb-rl; }
 
 .project-item {
   position: relative;
@@ -374,3 +390,12 @@ h1, h2, h3, h4, h5 {
     font-size: 18px; }
     .page-biography .text-bio p:first-child {
       margin-left: -18%; }
+
+.project-list {
+  position: relative; }
+  .project-list ul.social {
+    position: absolute;
+    right: -73px;
+    top: 26%; }
+    .project-list ul.social li {
+      list-style-type: none; }

@@ -27,6 +27,11 @@
         <section class="project-list"></section>
 
         <script id="project-template" type="text/x-handlebars-template">
+            <p class="sidebar-share">I'm also on</p>
+            <ul class="social">
+                <li><a href="#" class="btn-rounded"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" class="btn-rounded"><i class="fa fa-facebook"></i></a></li>
+            </ul>
             <div class="project-header row">
                 <a href="index.html">
                     <div class="btn-hamburger--dark fade-d--3000 animated fadeIn">
@@ -69,15 +74,18 @@
 
             </section>
             <section class="project-screens cfix">
-                <div class="full-width">
-                    <img src="img/test.jpg" />
+                <!--<div class="full-width">
+                    <img class="someClass" src="{{image_big}}" style="height: 100%;">
                 </div>
                 <div class="half-width">
-                    <img src="img/test.jpg" />
-                    <img src="img/test.jpg" />
-                    <img src="img/test.jpg" />
-                    <img src="img/test.jpg" />
-                </div>
+                    <img src="{{image_thumb_1}}" />
+                    <img src="{{image_thumb_2}}" />
+                    <img src="{{image_thumb_3}}" />
+                    <img src="{{image_thumb_4}}"  />
+                </div>-->
+                {{#each Bands}}
+                <img src="{{urlPath}}" />
+                {{/each}}
             </section>
             <section class="project-next cfix">
                 <small>View next</small>

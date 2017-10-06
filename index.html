@@ -10,6 +10,8 @@
     <title>Home</title>
     <!-- Anim,ate css  CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <!-- Bootstrap css  CDN -->
@@ -69,12 +71,13 @@
                                 <!--formateName prop1 prop2-->
                                 <!--{{formateName shortDescription technologies.name}}-->
                                 <!-- details.html?id={{id}} -->
-                               <a href="details.html?id={{@index}}">{{titleProject}}</a>
+                                <a href="details.html?id={{@index}}">{{titleProject}}</a>
                                 <span class="year">{{year}}</span>
                                 <div>
-                                   <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
+                                    <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
                                     <!--{{#if technologies}}<small>{{#toLower}}{{technologies.name}}{{/toLower}}</small>{{/if}}-->
                                 </div>
+                                
                             </li>
                             {{/each}}
                         </script>
