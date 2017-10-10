@@ -16,7 +16,6 @@
     z-index: 100;
     background: #000;
     color: #fff;
-    display: none;
 
     & .btn-hamburger--white {
         float: right;
@@ -25,6 +24,46 @@
 }
 
 #welcome-screen {
+    background: $dark;
+    height: 100%;
+    display: table;
+    width: 100%;
+    position: relative;
+
+    & .text-for-you {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        margin-left: -40%;
+        bottom: 15%;
+    }
+
+    & .home {
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+
+        &:before {
+            content: '';
+            width: 100%;
+            border-bottom: solid 1px $white;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: 1;
+        }
+
+
+        h2 {
+            font-size: 130px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+            letter-spacing: 90px;
+        }
+    }
+
     & .btn-hamburger--dark {
         margin: 25px 0 0 25px;
     }
@@ -32,11 +71,12 @@
 /* Navigation animated button
 -------------------------------------------------- */
 %_btn-hamburger {
-    position: relative;
+    position: absolute;
     width: 30px;
     height: 30px;
     background: none;
     cursor: pointer;
+    z-index: 2;
 
     .icon-bar {
         width: 30px;
@@ -79,6 +119,8 @@
 
     &--white {
         @extend %_btn-hamburger;
+        top: 25px;
+        left: 25px;
 
         &:hover {
 
@@ -120,7 +162,10 @@
     border: none;
     cursor: pointer;
     padding: 10px 22px;
-    background: purple; // $button-primary;
+
+    &:hover {
+        color: $text;
+    }
 }
 
 .btn-component {
@@ -128,7 +173,7 @@
 
     &--default {
         @extend %_btn-component;
-        background: red;
+        background: transparent;
 
         &:hover {
             background: #4e4e4e;
@@ -140,7 +185,7 @@
 
 
         &:hover {
-            background: blue;
+            background: #000;
             color: $white;
         }
     }
@@ -159,7 +204,7 @@
     line-height: 22px;
 }
 /* =======================
-   ROUTE list-style: none; 
+   ROUTE list
    ======================= */
 %_route-link {
     height: 25%;
@@ -313,10 +358,13 @@
     }
 }
 //project detail
+.page-details {
+    background-color: $white;
+}
+
 .sidebar-share {
     position: fixed;
     right: 0;
-    writing-mode: tb-rl;
 }
 
 .project-item {
@@ -334,7 +382,7 @@
 .project-header {
     height: 100vh;
     min-height: 600px;
-    background: #ccc;
+    background: $white;
     position: relative;
 
     & .project-item-title {
@@ -438,10 +486,31 @@
         }
     }
 
-    .half-width img {
-        width: 50%;
-        float: left;
-        outline: 6px solid $white;
+    .half-width {
+
+        .img-hidden-container {
+            width: 33.333%;
+            height: 300px;
+            overflow: hidden;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+            outline: 6px solid $white;
+            transition: all .5s ease-in-out;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+
+            &:hover {
+                transform: scale(1.3);
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+        }
     }
 }
 

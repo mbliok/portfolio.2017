@@ -1,3 +1,5 @@
+// Thank you https://stackoverflow.com/questions/4656843/jquery-get-querystring-from-url
+
 function getProjectById(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\/\]]/g, "\\$&");
@@ -44,16 +46,26 @@ $(document).ready(function () {
     })
 
 
-
-
-
-    $('body').on('click', '.btn-hamburger--dark, .btn-hamburger--white', function () {
-
+    $('body').on('click', '.btn-hamburger--white', function () {
         $(this).toggleClass('collapsed', 1000);
-        setTimeout(function () { $('.slide-menu').toggle() }, 500);
+        alert('1');
+        window.location = "/works.html"
+       // setTimeout(function () { $('.slide-menu').toggle() }, 500);
+    });
 
-    })
+    //$('body').on('click', '#close-details', function () {
+    //    var thequerystring = getProjectById("location");
+    //    window.location = "works.html" 
+    //   // alert('1');
+    //   // $('.home ').hide();
+    //   // alert('2');
+    //   // $('.slide-menu').show();
+    //   // $(this).toggleClass('collapsed', 1000);
+       
+       
+    //   // setTimeout(function () { $('.slide-menu').show() }, 500);
 
+    //})
 
 });
 

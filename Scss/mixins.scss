@@ -24,9 +24,6 @@
             @content;
         }
     }
-    //   @else {
-    //     @warn "Breakpoint mixin supports: xs, sm, md, lg";
-    //   }
 }
 
 @mixin clearfix {
@@ -45,7 +42,7 @@
     }
 }
 
-@mixin customTransition($x, $y, $time: .0s) {
+@mixin customTransition($x, $y, $time) {
     -webkit-transition-duration: $time;
     transition-duration: $time;
     -webkit-transform: translate($x, $y);

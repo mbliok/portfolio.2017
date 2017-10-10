@@ -33,7 +33,8 @@ html {
 body, html {
   font-family: 'gothman_book';
   font-size: 15px;
-  height: 100%; }
+  height: 100%;
+  color: #545454; }
   @media (max-width: 767px) {
     body, html {
       font-size: 13px;
@@ -56,6 +57,11 @@ img {
 
 .text-white {
   color: #fff; }
+
+.text-gradient {
+  background: -webkit-linear-gradient(#fff, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 .relative {
   position: relative; }
@@ -97,23 +103,54 @@ h1, h2, h3, h4, h5 {
   bottom: 0;
   z-index: 100;
   background: #000;
-  color: #fff;
-  display: none; }
+  color: #fff; }
   .slide-menu .btn-hamburger--white {
     float: right;
     margin: 25px 25px 0 0; }
 
-#welcome-screen .btn-hamburger--dark {
-  margin: 25px 0 0 25px; }
+#welcome-screen {
+  background: #000;
+  height: 100%;
+  display: table;
+  width: 100%;
+  position: relative; }
+  #welcome-screen .text-for-you {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    bottom: 15%; }
+  #welcome-screen .home {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle; }
+    #welcome-screen .home:before {
+      content: '';
+      width: 100%;
+      border-bottom: solid 1px #fff;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: 1; }
+    #welcome-screen .home h2 {
+      font-size: 130px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 90px; }
+  #welcome-screen .btn-hamburger--dark {
+    margin: 25px 0 0 25px; }
 
 /* Navigation animated button
 -------------------------------------------------- */
 .btn-hamburger, .btn-hamburger--white, .btn-hamburger--dark {
-  position: relative;
+  position: absolute;
   width: 30px;
   height: 30px;
   background: none;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
   .btn-hamburger .icon-bar, .btn-hamburger--white .icon-bar, .btn-hamburger--dark .icon-bar {
     width: 30px;
     transition: all 0.2s;
@@ -136,11 +173,13 @@ h1, h2, h3, h4, h5 {
   .collapsed.btn-hamburger .bottom-bar, .collapsed.btn-hamburger--white .bottom-bar, .collapsed.btn-hamburger--dark .bottom-bar {
     transform: rotate(0); }
 
-.btn-hamburger--white:hover .icon-bar {
-  background: #4e4e4e; }
-
-.btn-hamburger--white .icon-bar {
-  background: #fff; }
+.btn-hamburger--white {
+  top: 25px;
+  left: 25px; }
+  .btn-hamburger--white:hover .icon-bar {
+    background: #4e4e4e; }
+  .btn-hamburger--white .icon-bar {
+    background: #fff; }
 
 .btn-hamburger--dark:hover .icon-bar {
   background: #222; }
@@ -158,16 +197,17 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border: none;
   cursor: pointer;
-  padding: 10px 22px;
-  background: purple; }
+  padding: 10px 22px; }
+  .btn-component:hover, .btn-component--default:hover, .btn-component--primary:hover {
+    color: #747474; }
 
 .btn-component--default {
-  background: red; }
+  background: transparent; }
   .btn-component--default:hover {
     background: #4e4e4e; }
 
 .btn-component--primary:hover {
-  background: blue;
+  background: #000;
   color: #fff; }
 
 .btn-rounded {
@@ -183,7 +223,7 @@ h1, h2, h3, h4, h5 {
   line-height: 22px; }
 
 /* =======================
-   ROUTE list-style: none; 
+   ROUTE list
    ======================= */
 .route-link, .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
   height: 25%;
@@ -282,10 +322,12 @@ h1, h2, h3, h4, h5 {
     font-size: 16px;
     padding-bottom: 40px; }
 
+.page-details {
+  background-color: #fff; }
+
 .sidebar-share {
   position: fixed;
-  right: 0;
-  writing-mode: tb-rl; }
+  right: 0; }
 
 .project-item {
   position: relative;
@@ -300,7 +342,7 @@ h1, h2, h3, h4, h5 {
 .project-header {
   height: 100vh;
   min-height: 600px;
-  background: #ccc;
+  background: #fff;
   position: relative; }
   .project-header .project-item-title {
     background: #000;
@@ -370,10 +412,25 @@ h1, h2, h3, h4, h5 {
     position: relative;
     z-index: -2; }
 
+.project-screens .half-width .img-hidden-container {
+  width: 33.333%;
+  height: 300px;
+  overflow: hidden;
+  float: left; }
+
 .project-screens .half-width img {
-  width: 50%;
-  float: left;
-  outline: 6px solid #fff; }
+  width: 100%;
+  outline: 6px solid #fff;
+  transition: all .5s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.5s ease; }
+  .project-screens .half-width img:hover {
+    transform: scale(1.3);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%); }
 
 .project-next {
   background: #000; }

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Details</title>
+    <!-- Anim,ate css  CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
+    <!-- Bootstrap css  CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+    <!--<link href="css/default.css" rel="stylesheet" />-->
+    <link href="Styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="slide-menu">
+        <aside class="panel--left">
+            <div class="route-link--home animated  slideInDown">
+                <a href="index.html">
+                    <h2>kome</h2>
+                </a>
+            </div>
+            <div class="route-link--work animated  slideInDown">
+                <a href="details.html?id=0">
+                    <h2>pork</h2>
+                </a>
+            </div>
+            <div class="route-link--bio animated  slideInDown">
+                <a href="contact.html">
+                    <h2>contact</h2>
+                </a>
+            </div>
+            <div class="route-link--info animated  slideInDown">
+                <a href="#">
+                    <h2>info</h2>
+                </a>
+            </div>
+        </aside>
+        <aside class="panel--right">
+            <!--<div class="btn-hamburger--white collapsed">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </div>-->
+            <div class="recent-work fade-d--2000 animated fadeIn">
+                <div class="list">
+                    <h4>Recent Work</h4>
+
+                    <ul class="project-list"></ul>
+
+                    <script id="project-template" type="text/x-handlebars-template">
+                        {{#each projects}}
+                        <li class="character">
+                            <!--formateName prop1 prop2-->
+                            <!--{{formateName shortDescription technologies.name}}-->
+                            <!-- details.html?id={{id}} -->
+                            <a href="details.html?id={{@index}}">{{titleProject}}</a>
+                            <span class="year">{{year}}</span>
+                            <div>
+                                <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
+                                <!--{{#if technologies}}<small>{{#toLower}}{{technologies.name}}{{/toLower}}</small>{{/if}}-->
+                                </
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+
+
+
+                </div>
+            </div>
+
+        </aside>
+
+
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 js  CDN -->
+    <!--<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>-->
+    <!--plugins-->
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
