@@ -15,12 +15,13 @@
     <!-- Bootstrap css  CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
           crossorigin="anonymous">
-    <!--<link href="css/default.css" rel="stylesheet" />-->
+    <link href="owl.carousel.css" rel="stylesheet" />
     <link href="Styles/main.css" rel="stylesheet">
+
 </head>
 
 <body class="page-details">
-
+    <p class="mq">mq</p>
     <div class="project-item animated fadeIn">
 
 
@@ -44,10 +45,10 @@
                     <div class="project-item-title text-white">
                         <div class="table-container">
                             <div class="table-center">
-                                <h2>{{#toUpper}}{{titleProject}}{{/toUpper}}</h2>
+                                <h2 class="title">{{#toUpper}}{{titleProject}}{{/toUpper}}</h2>
                                 {{#if shortDescription}}<div class="short-description">{{shortDescription}}</div>{{/if}}
                                 {{#if technologies}}<span class="technology">{{technologies.name}}</span>{{/if}}
-                                <span class="date-creation">{{year}}</span>
+                                <span class="date-creation title">{{year}}</span>
                             </div>
                         </div>
                     </div>
@@ -63,25 +64,33 @@
                 </aside>
                 <aside class="project-text-right">
                     {{projectSpecification.rightColumn}}
-                    {{#if link}}<a href="{{link}}" alt="{{link}}" target="_blank">View online</a>
+                    {{#if link}}<a href="{{link}}" alt="{{link}}" target="_blank" class="title">View online</a>
                     {{else}}<p>Access to project is only for authorized persons.</p>{{/if}}
                 </aside>
                 <aside class="project-text-key-skils text-center">
-                    <strong>Technologies:</strong>
-                    <img src="img/icon-code.png" />
+                    <strong class="title">Technologies:</strong>
+                    <!--<img src="img/icon-code.png" />-->
                     {{technologies.name}}
                 </aside>
 
             </section>
             <section class="project-screens cfix">
-                <div class="full-width">
-                    <img class="someClass" src="{{imageBig}}" style="height: 100%;">
-                </div>
-                <div class="half-width">
+                <div class="carousel-container">
+                    <div class="border-container"></div>
+                    <!--<div class="owl-carousel">
+                        {{#each relevantScreenshots}}
+                        <div class="item">
+                            <img src="{{urlPath}}" class="grayscale" />
+                        </div>
+                        {{/each}}
+                    </div>-->
                     {{#each relevantScreenshots}}
-                    <div class="img-hidden-container"><img src="{{urlPath}}" class="grayscale"/></div>
+                   
+                        <img src="{{urlPath}}" class="" />
+                   
                     {{/each}}
                 </div>
+             
 
             </section>
 
@@ -99,10 +108,9 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-    <!-- Bootstrap 4 js  CDN -->
-    <!--<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>-->
-    <!--plugins-->
+
     <!-- Main js -->
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

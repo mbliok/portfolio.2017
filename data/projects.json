@@ -4,7 +4,7 @@
       "id": 0,
       "year": "2017",
       "link": "",
-      "titleProject": "Silva",
+      "titleProject": "Evala",
       "shortDescription": "A web app that makes it easy for you to connect and share messages with your colleagues.",
       "technologies": {
         "name": "HTML5, ECMAScript 6, Sass, Vue js, Webpack, Eslint, Bootstrap, vue-cli"
@@ -22,7 +22,7 @@
       "id": 1,
       "year": "2016",
       "link": "",
-      "titleProject": "Rehio accountant cockpit",
+      "titleProject": "Bexio accountant cockpit",
       "shortDescription": "Responsive web application for accountant management and client invitation",
       "technologies": {
         "name": "HTML5, CSS3, Sass, Angular 1, Angular Material, Gulp, Bower, Bourbon"
@@ -66,8 +66,9 @@
         "rightColumn": "My role as a Front-end was to create and style project goals views. I'm familiar with Razor, Partial views, MVC folder sctucture, Action methods... "
       },
       "imageProject": "./img/amorisk/code.jpg",
-      "baseImage": "./img/bexio/1.jpg",
-      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+      "relevantScreenshots": [
+        {"urlPath": "./img/amorisk/1.jpg"},{"urlPath": "./img/amorisk/2.jpg"},{"urlPath": "./img/amorisk/3.jpg"}
+      ]
     },
     {
       "id": 4,
@@ -89,7 +90,7 @@
     {
       "id": 5,
       "year": "2015",
-      "link": "hhttp://www.us4bg.org/",
+      "link": "http://www.us4bg.org/",
       "titleProject": "America for Bulgaria",
       "shortDescription": "Foundation friendship between the American and Bulgarian people-to-people contacts",
       "technologies": {
@@ -99,7 +100,9 @@
         "leftColumn": "For the website the goal of this project was to create for collaboration with American Foundation and Bulgaria. Their role is to enhance the longstanding legacy of goodwill and friendship between US – Bulgaria people. I was responsible for integration of designer wireframes into front-end code.",
         "rightColumn": "This project is a fully responsive and well tested to support cross-platforms and browsers.I used an User Agent to customize content with information about browser. While much of the project has already been completed, it still need additional support for new ideas."
       },
-      "imageProject": "./img/a4bg/code.jpg",
+     "relevantScreenshots": [
+        {"urlPath": "./img/a4bg/1.jpg"}
+      ],
       "baseImage": "./img/bexio/1.jpg",
       "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
     }

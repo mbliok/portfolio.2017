@@ -1,9 +1,21 @@
 // Thank you https://stackoverflow.com/questions/4656843/jquery-get-querystring-from-url
+//'use strict';
+
+//var test = require('test');
+////var owlSliders = require('./modules/owlSliders');
+//var init = function () {
+//    if (!window.console) console = { log: function () { } };
+
+
+//    test.init();
+
+//};
+
+//$(document).ready(init);
 
 function getProjectById(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\/\]]/g, "\\$&");
-    console.log(name + url + '5555');
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
     results = regex.exec(url);
     if (!results) return null;
@@ -26,7 +38,11 @@ Handlebars.registerHelper("toUpper", function (options) {
     return options.fn(this).toUpperCase();
 })
 
+
+
 $(document).ready(function () {
+
+
     // create referanxce to list template
     var projectsTemplate = $('#project-template').html();
     var compiledTemplate = Handlebars.compile(projectsTemplate);
@@ -34,12 +50,22 @@ $(document).ready(function () {
     var projectId = getProjectById("id");
     console.log(projectId + 'is the prj id')
 
-    $.ajax('./data/projects.json').done(function (cast) {
-        console.log(cast);
+    $.ajax('./data/projects.json').done(function (data) {
+        console.log(data);
         if ($('body').hasClass('page-details')) {
-            $projectsList.html(compiledTemplate(cast.projects[projectId]))
+            $projectsList.html(compiledTemplate(data.projects[projectId]))
+            $('.owl-carousel').owlCarousel({
+                margin: 0,
+                loop: true,
+                animateOut: 'fadeOut',
+                items: 1,
+                center: true,
+                autoplay: true,
+                // autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            })
         } else {
-            $projectsList.html(compiledTemplate(cast))
+            $projectsList.html(compiledTemplate(data))
         }
 
 
@@ -48,24 +74,10 @@ $(document).ready(function () {
 
     $('body').on('click', '.btn-hamburger--white', function () {
         $(this).toggleClass('collapsed', 1000);
-        alert('1');
         window.location = "/works.html"
-       // setTimeout(function () { $('.slide-menu').toggle() }, 500);
     });
 
-    //$('body').on('click', '#close-details', function () {
-    //    var thequerystring = getProjectById("location");
-    //    window.location = "works.html" 
-    //   // alert('1');
-    //   // $('.home ').hide();
-    //   // alert('2');
-    //   // $('.slide-menu').show();
-    //   // $(this).toggleClass('collapsed', 1000);
-       
-       
-    //   // setTimeout(function () { $('.slide-menu').show() }, 500);
 
-    //})
 
 });
 

@@ -30,13 +30,46 @@
     font-style: normal;
 }
 
+.mq {
+    position: fixed;
+    background: #fff;
+    z-index: 999;
+
+
+
+
+    @include breakpoint(lg) {
+        background: violet;
+    }
+
+    @include breakpoint(md) {
+        background: orange;
+    }
+
+    @include breakpoint(tablet-l) {
+        background: green;
+    }
+
+    @include breakpoint(tablet-p) {
+        background: gray;
+    }
+
+    @include breakpoint(mobile) {
+        background: red;
+    }
+}
+
 body, html {
     font-family: 'gothman_book';
-    font-size: 15px;
+    font-size: 16px;
     height: 100%;
     color: $text-gray;
 
-    @include breakpoint(xs) {
+    @include breakpoint(md) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(mobile) {
         font-size: 13px;
         line-height: 13px;
     }
@@ -54,6 +87,11 @@ img {
     color: $white;
 }
 
+.title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 7px;
+}
+
 .pull-left {
     float: left;
 }
@@ -65,11 +103,13 @@ img {
 .text-white {
     color: $white;
 }
-.text-gradient{
+
+.text-gradient {
     background: -webkit-linear-gradient(#fff, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .relative {
     position: relative;
 }
