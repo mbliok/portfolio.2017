@@ -5,17 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Details</title>
-    <!-- Anim,ate css  CDN -->
+    <meta name="description" content="Maia Bliok front-end portfolio 2017">
+    <meta name="author" content="Maia Bliok">
+    <title>Projects</title>
+    <!-- Animiate css  CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
-    <!-- Bootstrap css  CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-          crossorigin="anonymous">
-    <link href="owl.carousel.css" rel="stylesheet" />
     <link href="Styles/main.css" rel="stylesheet">
 
 </head>
@@ -28,12 +22,12 @@
         <section class="project-list"></section>
 
         <script id="project-template" type="text/x-handlebars-template">
-            <p class="sidebar-share">I'm also on</p>
+            <!--<p class="sidebar-share">I'm also on</p>
             <ul class="social">
                 <li><a href="#" class="btn-rounded"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" class="btn-rounded"><i class="fa fa-facebook"></i></a></li>
-            </ul>
-            <div class="project-header row">
+            </ul>-->
+            <div class="project-header">
                 <a href="works.html">
                     <div class="btn-hamburger--dark fade-d--3000 animated fadeIn" id="close-details">
                         <span class="icon-bar top-bar"></span>
@@ -64,34 +58,21 @@
                 </aside>
                 <aside class="project-text-right">
                     {{projectSpecification.rightColumn}}
-                    {{#if link}}<a href="{{link}}" alt="{{link}}" target="_blank" class="title">View online</a>
-                    {{else}}<p>Access to project is only for authorized persons.</p>{{/if}}
+                    {{#if link}}<a href="{{link}}" alt="{{link}}" target="_blank" class="title underline">View online</a>
+                    {{else}}<p class="title underline text-gray">Access to project is only for authorized persons.</p>{{/if}}
                 </aside>
                 <aside class="project-text-key-skils text-center">
                     <strong class="title">Technologies:</strong>
-                    <!--<img src="img/icon-code.png" />-->
                     {{technologies.name}}
                 </aside>
 
             </section>
             <section class="project-screens cfix">
-                <div class="carousel-container">
-                    <div class="border-container"></div>
-                    <!--<div class="owl-carousel">
-                        {{#each relevantScreenshots}}
-                        <div class="item">
-                            <img src="{{urlPath}}" class="grayscale" />
-                        </div>
-                        {{/each}}
-                    </div>-->
+                <div class="img-container">
                     {{#each relevantScreenshots}}
-                   
-                        <img src="{{urlPath}}" class="" />
-                   
+                    <img src="{{urlPath}}" class="" />
                     {{/each}}
                 </div>
-             
-
             </section>
 
         </script>
@@ -108,9 +89,6 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-
-    <!-- Main js -->
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

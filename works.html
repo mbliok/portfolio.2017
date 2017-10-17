@@ -5,17 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Details</title>
-    <!-- Anim,ate css  CDN -->
+    <meta name="description" content="Maia Bliok front-end portfolio 2017">
+    <meta name="author" content="Maia Bliok">
+    <title>Works</title>
+    <!-- Animiate css  CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
-    <!-- Bootstrap css  CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-          crossorigin="anonymous">
-    <link href="owl.carousel.css" rel="stylesheet" />
     <link href="Styles/main.css" rel="stylesheet">
 </head>
 
@@ -25,22 +19,22 @@
         <aside class="panel--left">
             <div class="route-link--home animated  slideInDown">
                 <a href="index.html">
-                    <h2>home</h2>
+                    <h2>Home</h2>
                 </a>
             </div>
             <div class="route-link--work animated  slideInDown">
                 <a href="details.html?id=0">
-                    <h2>work</h2>
+                    <h2>Work</h2>
                 </a>
             </div>
             <div class="route-link--bio animated  slideInDown">
                 <a href="contact.html">
-                    <h2>contact</h2>
+                    <h2>Contact</h2>
                 </a>
             </div>
             <div class="route-link--info animated  slideInDown">
                 <a href="#">
-                    <h2>bio</h2>
+                    <h2>Bio</h2>
                 </a>
             </div>
         </aside>
@@ -54,16 +48,10 @@
                     <script id="project-template" type="text/x-handlebars-template">
                         {{#each projects}}
                         <li class="character">
-                            <!--formateName prop1 prop2-->
                             <!--{{formateName shortDescription technologies.name}}-->
                             <!-- details.html?id={{id}} -->
                             <a href="details.html?id={{@index}}">{{titleProject}}</a>
                             <span class="year title">{{year}}</span>
-                            <div>
-                                <!--{{#if shortDescription}}<div>{{shortDescription}}</div>{{/if}}-->
-                                <!--{{#if technologies}}<small>{{#toLower}}{{technologies.name}}{{/toLower}}</small>{{/if}}-->
-                                </
-                            </div>
                         </li>
                         {{/each}}
                     </script>

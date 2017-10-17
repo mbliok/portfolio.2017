@@ -1,0 +1,84 @@
+{
+  "characters": [
+    {
+      "id": 0,
+      "year": "2017",
+      "link": "",
+      "titleProject": "Silva",
+      "shortDescription": "A web app that makes it easy for you to connect and share messages with your colleagues.",
+      "technologies": {
+        "name": "Vue js, Webpack, Eslint, SASS, Bootstrap, vue-cli"
+      },
+      "projectSpecification": {
+        "leftColumn": "hello\n world",
+        "rightColumn": ""
+      },
+      "imgUrl": "./img/img_0.jpg"
+    },
+    {
+      "id": 1,
+      "year": "2016",
+      "link": "",
+      "titleProject": "Rehio accountant cockpit",
+      "shortDescription": "Responsive web application for accountant management and client invitation",
+      "technologies": {
+        "name": "Angular 1, Angular Material, Gulp, Bower, Bourbon"
+      },
+      "projectSpecification": {
+        "leftColumn": "leftColumn 123",
+        "rightColumn": "rightColumn 123"
+      },
+      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+    },
+    {
+      "id": 2,
+      "year": "2017",
+      "link": "https://www.amorisk.com/",
+      "titleProject": "amo risk",
+      "shortDescription": "Risk Management System for planned purchases of materials",
+      "technologies": {
+        "name": "Java Script, jQuery, Razor, html SASS,Bootstrap, Gulp"
+      },
+      "projectSpecification": {
+        "leftColumn": "leftColumn 123",
+        "rightColumn": "rightColumn 123"
+      },
+      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+    },
+    {
+      "id": 3,
+      "year": "2015",
+      "link": "https://www.teamgb.com/",
+      "titleProject": "Team GB",
+      "shortDescription": "From British Olympic Association about Games held in Baku 2015",
+      "technologies": {
+        "name": "Sitefinity CMS, Java Script, jQuery, html SASS,Bootstrap, Gulp"
+      },
+      "projectSpecification": {
+        "leftColumn": "leftColumn 123",
+        "rightColumn": "rightColumn 123"
+      },
+      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+    },
+     {
+      "id":4,
+      "year": "2015",
+      "link": "http://www.us4bg.org/",
+      "titleProject": "America for Bulgaria",
+      "shortDescription": "Foundation friendship between the American and Bulgarian people-to-people contacts",
+      "technologies": {
+        "name": "Umbraco CMS, Java Script, jQuery, Bootstrap, Sass & gulp integration"
+      },
+      "projectSpecification": {
+        "leftColumn": "For the website the goal of this project was to create for collaboration with American Foundation and Bulgaria. Their role is to enhance the longstanding legacy of goodwill and friendship between US – Bulgaria people. I was responsible for integration of designer wireframes into front-end code.",
+        "rightColumn": "This project is a fully responsive and well tested to support cross-platforms and browsers.I used an User Agent to customize content with information about browser. While much of the project has already been completed, it still need additional support for new ideas."
+      },
+      "relevantScreenshots": [
+        {"urlPath": "./img/a4bg/1.jpg"},{"urlPath": "./img/a4bg/2.jpg"},{"urlPath": "./img/a4bg/3.jpg"},{"urlPath": "./img/a4bg/4.jpg"}
+      ],
+      "imageProject": "./img/a4bg/code.jpg",
+      "baseImage": "./img/bexio/1.jpg",
+      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+    }
+  ]
+}

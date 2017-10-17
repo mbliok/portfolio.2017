@@ -15,12 +15,39 @@
     right: 0;
     bottom: 0;
     z-index: 100;
-    background: #000;
-    color: #fff;
 
+background: 
+   url('../img/menu-bgr1.jpg') 
+    center / cover
+    no-repeat
+    fixed
+    #000;
     & .btn-hamburger--white {
         float: right;
         margin: 25px 25px 0 0;
+    }
+
+    .panel {
+
+        &--left {
+            overflow: hidden;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+                height: 30%;
+            }
+        }
+
+        &--right {
+            overflow-x: hidden;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+                top: auto;
+                height: 70%;
+                bottom: 0;
+            }
+        }
     }
 }
 
@@ -56,7 +83,7 @@
 
 
         h2 {
-            font-size: 130px;
+            font-size: 62px;
             position: relative;
             text-align: center;
             text-transform: uppercase;
@@ -66,6 +93,16 @@
             @include breakpoint(md) {
                 font-size: 52px;
                 letter-spacing: 70px;
+            }
+
+            @include breakpoint(tablet-l) {
+                font-size: 32px;
+                letter-spacing: 42px;
+            }
+
+            @include breakpoint(mobile) {
+                font-size: 20px;
+                letter-spacing: 16px;
             }
         }
     }
@@ -196,7 +233,7 @@
         }
     }
 }
-//
+
 .btn-rounded {
     display: inline-block;
     font-weight: 400;
@@ -228,10 +265,41 @@
     width: 50%;
     font-family: 'Oswald', sans-serif;
 
+    @include breakpoint(mobile) {
+        width: auto;
+        margin: 15px;
+    }
+
     a {
-        color: #0f0e0e;
+        color: #2c2a24;
         text-decoration: none;
         text-transform: uppercase;
+
+        @include breakpoint(mobile) {
+            color: $white;
+            text-transform: none;
+            font-family: 'Open Sans Condensed', sans-serif;
+            letter-spacing: 7px;
+
+            &:before {
+                background: $white;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: .25s linear;
+            }
+
+            &:hover:before,
+            &:focus:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
 
         h2 {
             font-size: 26vh;
@@ -239,6 +307,11 @@
             margin: 0;
             display: inline;
             font-family: 'Oswald Light', sans-serif;
+
+            @include breakpoint(mobile) {
+                font-size: 12px;
+                font-weight: 400;
+            }
         }
     }
 }
@@ -263,21 +336,34 @@
         -webkit-animation-duration: 1200ms;
         text-align: right;
         width: 100%;
+
+        @include breakpoint(mobile) {
+            width: auto;
+            text-align: center;
+        }
     }
 
     &--info {
         @extend %_route-link;
         -webkit-animation-duration: 1400ms;
     }
+
+    &--home, &--work, &--bio, &--info {
+        @include breakpoint(mobile) {
+            width: auto;
+            text-align: center;
+            height: auto;
+            float: left;
+        }
+    }
 }
 /* =======================
-   COLUMN TEMPLATE 
+   COLUMN TEMPLATE
    ======================= */
 %_panel {
     position: absolute;
     width: 50%;
     height: 100%;
-    overflow: hidden;
 }
 
 .panel {
@@ -293,6 +379,33 @@
         @extend %_panel;
         right: 0;
         top: 0;
+    }
+}
+
+.project-list {
+    .panel {
+        &--left {
+            @extend %_panel;
+            overflow: hidden;
+
+            @include breakpoint(tablet-l) {
+                display: none;
+            }
+        }
+
+        &--right {
+            @extend %_panel;
+
+            @include breakpoint(tablet-l) {
+                width: 100%;
+                min-height: 240px;
+                bottom: 0;
+                background: $dark;
+                left: 0;
+                z-index: 20;
+                position: relative;
+            }
+        }
     }
 }
 // animation duration
@@ -363,8 +476,17 @@
                     font-size: 14px;
                 }
 
+                @include breakpoint(tablet-l) {
+                    width: 380px;
+                }
+
+                @include breakpoint(mobile) {
+                    width: auto;
+                }
+
                 &:hover {
-                    text-decoration: underline;
+                    text-decoration: none;
+                    color: $text-gray;
                 }
             }
         }
@@ -390,7 +512,6 @@
 
 .project-item {
     position: relative;
-    width: calc(100vw - 120px);
     background: $white;
 }
 
@@ -406,30 +527,69 @@
     background: $white;
     position: relative;
 
+    @include breakpoint(tablet-l) {
+        height: auto;
+        min-height: 1px;
+    }
+
     & .project-item-title {
         background: #000;
         height: 100vh;
+
+        @include breakpoint(tablet-l) {
+            height: auto;
+        }
 
         h2 {
             font-size: 44px;
             line-height: 85px;
             letter-spacing: 32px;
             color: $white;
+
+            @include breakpoint(md) {
+                font-size: 34px;
+                line-height: 74px;
+                letter-spacing: 30px;
+            }
+
+            @include breakpoint(tablet-l) {
+                font-size: 22px;
+                line-height: 50px;
+                letter-spacing: 22px;
+                padding-top: 20px;
+            }
         }
 
         .short-description {
             margin-top: 60px;
             max-width: 70%;
+
+            @include breakpoint(tablet-l) {
+                margin-top: 10px;
+                max-width: 100%;
+            }
         }
 
         .technology {
             margin-top: 60px;
             display: block;
+
+            @include breakpoint(tablet-l) {
+                margin-top: 10px;
+                color: $text-gray;
+            }
         }
 
         .date-creation {
             position: absolute;
             bottom: 25px;
+
+            @include breakpoint(tablet-l) {
+                position: relative;
+                bottom: auto;
+                margin-top: 10px;
+                display: block;
+            }
         }
     }
 
@@ -444,11 +604,15 @@
         display: table-cell;
         vertical-align: middle;
         padding: 0 60px;
+
+        @include breakpoint(tablet-l) {
+            padding: 0 40px 10px 40px;
+        }
     }
 
     & .btn-hamburger--dark {
         position: fixed;
-        right: 26px;
+        left: 26px;
         top: 25px;
     }
 }
@@ -461,6 +625,17 @@
         width: 40%;
         float: left;
         padding: 40px 60px;
+        color: $text;
+
+        @include breakpoint(md) {
+            padding: 24px;
+        }
+
+        @include breakpoint(tablet-l) {
+            padding: 0;
+            width: 100%;
+            float: none;
+        }
 
         a {
             display: table;
@@ -478,7 +653,18 @@
         float: left;
         padding: 40px 60px;
 
+        @include breakpoint(md) {
+            padding: 24px;
+        }
+
+        @include breakpoint(tablet-l) {
+            padding: 0;
+            width: 100%;
+            float: none;
+        }
+
         strong {
+            display: block;
             color: $dark;
             font-size: 18px;
         }
@@ -493,19 +679,45 @@
 //images progect
 .project-screens {
     background: $dark;
-    height: 100vh;
-    .carousel-container {
-        position: relative;
+
+    .img-container {
+        margin: 0 auto;
     }
 
-    .border-container {
-        position: absolute;
-        height: 500px;
-        width: 400px;
-        border: 3px solid;
-        left: 18%;
-        margin-top: 6%;
-        overflow: hidden;
+    img {
+        float: left;
+        margin: 4px;
+
+
+
+
+        @include breakpoint(md) {
+            margin: 0.2%;
+
+            &:nth-child(1) {
+                width: 32%;
+            }
+
+            &:nth-child(2) {
+                width: 17%;
+            }
+
+            &:nth-child(3) {
+                width: 17%;
+            }
+
+            &:nth-child(4) {
+                width: 32%;
+            }
+        }
+
+        @include breakpoint(tablet-l) {
+            margin: 2% 0;
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                width: 100%;
+            }
+        }
     }
 
     .owl-carousel {
@@ -536,7 +748,6 @@
         display: table-cell;
         vertical-align: middle;
         padding: 0 20%;
-        font-size: 18px;
 
         & p:first-child {
             margin-left: -18%;

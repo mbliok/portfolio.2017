@@ -57,11 +57,13 @@
     @include breakpoint(mobile) {
         background: red;
     }
+
 }
 
 body, html {
     font-family: 'gothman_book';
     font-size: 16px;
+    line-height: 28px;
     height: 100%;
     color: $text-gray;
 
@@ -71,7 +73,7 @@ body, html {
 
     @include breakpoint(mobile) {
         font-size: 13px;
-        line-height: 13px;
+        line-height: 16px;
     }
 }
 
@@ -103,7 +105,9 @@ img {
 .text-white {
     color: $white;
 }
-
+.text-gray{
+color:$text-gray;
+}
 .text-gradient {
     background: -webkit-linear-gradient(#fff, #333);
     -webkit-background-clip: text;

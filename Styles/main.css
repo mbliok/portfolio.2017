@@ -220,7 +220,32 @@ html {
 .mq {
   position: fixed;
   background: #fff;
-  z-index: 999; }
+  z-index: 999;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
   @media screen and (max-width: 1280px) {
     .mq {
       background: violet; } }
@@ -240,15 +265,26 @@ html {
 body, html {
   font-family: 'gothman_book';
   font-size: 16px;
+  line-height: 28px;
   height: 100%;
-  color: #545454; }
+  color: #545454;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
   @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
     body, html {
       font-size: 14px; } }
   @media screen and (max-width: 767px) {
     body, html {
       font-size: 13px;
-      line-height: 13px; } }
+      line-height: 16px; } }
 
 /*=====================*/
 /*=====================*/
@@ -271,6 +307,9 @@ img {
 
 .text-white {
   color: #fff; }
+
+.text-gray {
+  color: #545454; }
 
 .text-gradient {
   background: -webkit-linear-gradient(#fff, #333);
@@ -316,11 +355,34 @@ h1, h2, h3, h4, h5 {
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: #000;
-  color: #fff; }
+  background: url("../img/menu-bgr1.jpg") center/cover no-repeat fixed #000; }
   .slide-menu .btn-hamburger--white {
     float: right;
     margin: 25px 25px 0 0; }
+  .slide-menu .panel--left {
+    overflow: hidden;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 767px) {
+      .slide-menu .panel--left {
+        width: 100%;
+        height: 30%; } }
+  .slide-menu .panel--right {
+    overflow-x: hidden;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 767px) {
+      .slide-menu .panel--right {
+        width: 100%;
+        top: auto;
+        height: 70%;
+        bottom: 0; } }
 
 #welcome-screen {
   background: #000;
@@ -347,16 +409,39 @@ h1, h2, h3, h4, h5 {
       top: 50%;
       z-index: 1; }
     #welcome-screen .home h2 {
-      font-size: 130px;
+      font-size: 62px;
       position: relative;
       text-align: center;
       text-transform: uppercase;
       color: #fff;
-      letter-spacing: 90px; }
+      letter-spacing: 90px;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
       @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
         #welcome-screen .home h2 {
           font-size: 52px;
           letter-spacing: 70px; } }
+      @media screen and (max-width: 1024px) {
+        #welcome-screen .home h2 {
+          font-size: 32px;
+          letter-spacing: 42px; } }
+      @media screen and (max-width: 767px) {
+        #welcome-screen .home h2 {
+          font-size: 20px;
+          letter-spacing: 16px; } }
   #welcome-screen .btn-hamburger--dark {
     margin: 25px 0 0 25px; }
 
@@ -454,17 +539,60 @@ h1, h2, h3, h4, h5 {
 .route-link, .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
   height: 25%;
   width: 50%;
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 767px) {
+    .route-link, .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+      width: auto;
+      margin: 15px; } }
   .route-link a, .route-link--home a, .route-link--work a, .route-link--bio a, .route-link--info a {
-    color: #0f0e0e;
+    color: #2c2a24;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 767px) {
+      .route-link a, .route-link--home a, .route-link--work a, .route-link--bio a, .route-link--info a {
+        color: #fff;
+        text-transform: none;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 7px; }
+        .route-link a:before, .route-link--home a:before, .route-link--work a:before, .route-link--bio a:before, .route-link--info a:before {
+          background: #fff;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: .25s linear; }
+        .route-link a:hover:before, .route-link--home a:hover:before, .route-link--work a:hover:before, .route-link--bio a:hover:before, .route-link--info a:hover:before, .route-link a:focus:before, .route-link--home a:focus:before, .route-link--work a:focus:before, .route-link--bio a:focus:before, .route-link--info a:focus:before {
+          visibility: visible;
+          transform: scaleX(1); } }
     .route-link a h2, .route-link--home a h2, .route-link--work a h2, .route-link--bio a h2, .route-link--info a h2 {
       font-size: 26vh;
       font-weight: 600;
       margin: 0;
       display: inline;
-      font-family: 'Oswald Light', sans-serif; }
+      font-family: 'Oswald Light', sans-serif;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+      @media screen and (max-width: 767px) {
+        .route-link a h2, .route-link--home a h2, .route-link--work a h2, .route-link--bio a h2, .route-link--info a h2 {
+          font-size: 12px;
+          font-weight: 400; } }
 
 .route-link--home {
   -webkit-animation-duration: 800ms;
@@ -477,19 +605,40 @@ h1, h2, h3, h4, h5 {
 .route-link--bio {
   -webkit-animation-duration: 1200ms;
   text-align: right;
-  width: 100%; }
+  width: 100%;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 767px) {
+    .route-link--bio {
+      width: auto;
+      text-align: center; } }
 
 .route-link--info {
   -webkit-animation-duration: 1400ms; }
 
+.route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 767px) {
+    .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+      width: auto;
+      text-align: center;
+      height: auto;
+      float: left; } }
+
 /* =======================
-   COLUMN TEMPLATE 
+   COLUMN TEMPLATE
    ======================= */
-.panel, .panel--left, .panel--right {
+.panel, .panel--left, .panel--right, .project-list .panel--left, .project-list .panel--right {
   position: absolute;
   width: 50%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 .panel--left {
   left: 0;
@@ -498,6 +647,33 @@ h1, h2, h3, h4, h5 {
 .panel--right {
   right: 0;
   top: 0; }
+
+.project-list .panel--left {
+  overflow: hidden;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 1024px) {
+    .project-list .panel--left {
+      display: none; } }
+
+.project-list .panel--right {
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 1024px) {
+    .project-list .panel--right {
+      width: 100%;
+      min-height: 240px;
+      bottom: 0;
+      background: #000;
+      left: 0;
+      z-index: 20;
+      position: relative; } }
 
 .fade-d, .fade-d--800, .fade-d--1000, .fade-d--1200, .fade-d--1400, .fade-d--2000, .fade-d--3000 {
   -webkit-animation-delay: 500ms; }
@@ -537,13 +713,35 @@ h1, h2, h3, h4, h5 {
     box-sizing: border-box;
     text-decoration: none;
     color: #fff;
-    font-size: 20px; }
+    font-size: 20px;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
     @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
       .recent-work ul li a {
         padding: 16px 24px 6px 24px;
         font-size: 14px; } }
+    @media screen and (max-width: 1024px) {
+      .recent-work ul li a {
+        width: 380px; } }
+    @media screen and (max-width: 767px) {
+      .recent-work ul li a {
+        width: auto; } }
     .recent-work ul li a:hover {
-      text-decoration: underline; }
+      text-decoration: none;
+      color: #545454; }
   .recent-work .list {
     display: table-cell;
     vertical-align: middle;
@@ -560,7 +758,6 @@ h1, h2, h3, h4, h5 {
 
 .project-item {
   position: relative;
-  width: calc(100vw - 120px);
   background: #fff; }
 
 .year {
@@ -572,24 +769,91 @@ h1, h2, h3, h4, h5 {
   height: 100vh;
   min-height: 600px;
   background: #fff;
-  position: relative; }
+  position: relative;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+  @media screen and (max-width: 1024px) {
+    .project-header {
+      height: auto;
+      min-height: 1px; } }
   .project-header .project-item-title {
     background: #000;
-    height: 100vh; }
+    height: 100vh;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 1024px) {
+      .project-header .project-item-title {
+        height: auto; } }
     .project-header .project-item-title h2 {
       font-size: 44px;
       line-height: 85px;
       letter-spacing: 32px;
-      color: #fff; }
+      color: #fff;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+      @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
+        .project-header .project-item-title h2 {
+          font-size: 34px;
+          line-height: 74px;
+          letter-spacing: 30px; } }
+      @media screen and (max-width: 1024px) {
+        .project-header .project-item-title h2 {
+          font-size: 22px;
+          line-height: 50px;
+          letter-spacing: 22px;
+          padding-top: 20px; } }
     .project-header .project-item-title .short-description {
       margin-top: 60px;
-      max-width: 70%; }
+      max-width: 70%;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+      @media screen and (max-width: 1024px) {
+        .project-header .project-item-title .short-description {
+          margin-top: 10px;
+          max-width: 100%; } }
     .project-header .project-item-title .technology {
       margin-top: 60px;
-      display: block; }
+      display: block;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+      @media screen and (max-width: 1024px) {
+        .project-header .project-item-title .technology {
+          margin-top: 10px;
+          color: #545454; } }
     .project-header .project-item-title .date-creation {
       position: absolute;
-      bottom: 25px; }
+      bottom: 25px;
+      /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+      @media screen and (max-width: 1024px) {
+        .project-header .project-item-title .date-creation {
+          position: relative;
+          bottom: auto;
+          margin-top: 10px;
+          display: block; } }
   .project-header .table-container {
     display: table;
     height: 100%;
@@ -598,10 +862,18 @@ h1, h2, h3, h4, h5 {
   .project-header .table-center {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 60px; }
+    padding: 0 60px;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 1024px) {
+      .project-header .table-center {
+        padding: 0 40px 10px 40px; } }
   .project-header .btn-hamburger--dark {
     position: fixed;
-    right: 26px;
+    left: 26px;
     top: 25px; }
 
 .project-description {
@@ -610,7 +882,26 @@ h1, h2, h3, h4, h5 {
   .project-description .project-text-left, .project-description .project-text-right {
     width: 40%;
     float: left;
-    padding: 40px 60px; }
+    padding: 40px 60px;
+    color: #747474;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
+      .project-description .project-text-left, .project-description .project-text-right {
+        padding: 24px; } }
+    @media screen and (max-width: 1024px) {
+      .project-description .project-text-left, .project-description .project-text-right {
+        padding: 0;
+        width: 100%;
+        float: none; } }
     .project-description .project-text-left a, .project-description .project-text-right a {
       display: table;
       padding: 4px 8px;
@@ -621,8 +912,27 @@ h1, h2, h3, h4, h5 {
   .project-description .project-text-key-skils {
     width: 20%;
     float: left;
-    padding: 40px 60px; }
+    padding: 40px 60px;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
+      .project-description .project-text-key-skils {
+        padding: 24px; } }
+    @media screen and (max-width: 1024px) {
+      .project-description .project-text-key-skils {
+        padding: 0;
+        width: 100%;
+        float: none; } }
     .project-description .project-text-key-skils strong {
+      display: block;
       color: #000;
       font-size: 18px; }
     .project-description .project-text-key-skils img {
@@ -631,18 +941,38 @@ h1, h2, h3, h4, h5 {
       margin: 8px auto; }
 
 .project-screens {
-  background: #000;
-  height: 100vh; }
-  .project-screens .carousel-container {
-    position: relative; }
-  .project-screens .border-container {
-    position: absolute;
-    height: 500px;
-    width: 400px;
-    border: 3px solid;
-    left: 18%;
-    margin-top: 6%;
-    overflow: hidden; }
+  background: #000; }
+  .project-screens .img-container {
+    margin: 0 auto; }
+  .project-screens img {
+    float: left;
+    margin: 4px;
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+    /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
+    @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
+      .project-screens img {
+        margin: 0.2%; }
+        .project-screens img:nth-child(1) {
+          width: 32%; }
+        .project-screens img:nth-child(2) {
+          width: 17%; }
+        .project-screens img:nth-child(3) {
+          width: 17%; }
+        .project-screens img:nth-child(4) {
+          width: 32%; } }
+    @media screen and (max-width: 1024px) {
+      .project-screens img {
+        margin: 2% 0; }
+        .project-screens img:nth-child(1), .project-screens img:nth-child(2), .project-screens img:nth-child(3), .project-screens img:nth-child(4) {
+          width: 100%; } }
   .project-screens .owl-carousel {
     margin-left: 24%;
     padding-top: 2%; }
@@ -661,8 +991,7 @@ h1, h2, h3, h4, h5 {
   .page-biography .text-bio {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 20%;
-    font-size: 18px; }
+    padding: 0 20%; }
     .page-biography .text-bio p:first-child {
       margin-left: -18%; }
 

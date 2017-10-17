@@ -6,11 +6,7 @@ var instance = false;
 function owlSliders() {
     function init() {
 
-
         alert('1');
-
-
-
 
     }
     return {

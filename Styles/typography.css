@@ -25,7 +25,32 @@
 .mq {
   position: fixed;
   background: #fff;
-  z-index: 999; }
+  z-index: 999;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
   @media screen and (max-width: 1280px) {
     .mq {
       background: violet; } }
@@ -45,15 +70,26 @@
 body, html {
   font-family: 'gothman_book';
   font-size: 16px;
+  line-height: 28px;
   height: 100%;
-  color: #545454; }
+  color: #545454;
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/
+  /*@if $class == sm-h {
+        @media screen and (max-width: 767px), screen and (min-width: 320px) {
+            @content;
+        }
+    }*/ }
   @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
     body, html {
       font-size: 14px; } }
   @media screen and (max-width: 767px) {
     body, html {
       font-size: 13px;
-      line-height: 13px; } }
+      line-height: 16px; } }
 
 /*=====================*/
 /*=====================*/
@@ -76,6 +112,9 @@ img {
 
 .text-white {
   color: #fff; }
+
+.text-gray {
+  color: #545454; }
 
 .text-gradient {
   background: -webkit-linear-gradient(#fff, #333);

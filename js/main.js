@@ -54,20 +54,10 @@ $(document).ready(function () {
         console.log(data);
         if ($('body').hasClass('page-details')) {
             $projectsList.html(compiledTemplate(data.projects[projectId]))
-            $('.owl-carousel').owlCarousel({
-                margin: 0,
-                loop: true,
-                animateOut: 'fadeOut',
-                items: 1,
-                center: true,
-                autoplay: true,
-                // autoplayTimeout: 2000,
-                autoplayHoverPause: true
-            })
+
         } else {
             $projectsList.html(compiledTemplate(data))
         }
-
 
     })
 

@@ -25,11 +25,11 @@
       "titleProject": "Bexio accountant cockpit",
       "shortDescription": "Responsive web application for accountant management and client invitation",
       "technologies": {
-        "name": "HTML5, CSS3, Sass, Angular 1, Angular Material, Gulp, Bower, Bourbon"
+        "name": "HTML5  CSS3  Sass  Angular 1  Angular Material  Gulp  Bower Bourbon"
       },
       "projectSpecification": {
         "leftColumn": "This project is a responsive web application for accountant and client management and is part of another large system Bexio. Angular 1 is the technology we used in the project with my colleagus. For interaction design I choose Angular Material framework which I already knew from a prev. projects. My role and responsibilities as a Front-End developer was to set-up the project, create views, styling app, routing and  basic support for functionality.",
-        "rightColumn": "Some of this code which I develop was the header functionality, search directive, custom sorting, form validation... At the ending of the project I made a refactoring of my code and for the purpose I used BEM methodology and re"
+        "rightColumn": "Some of this code which I develop was the header functionality, search directive, sorting, Forms validation, custom Bexio tags for components... At the ending of the project I did a refactoring of my code and for the purpose I used BEM methodology and rewrite and optimize the code."
       },
       "imageProject": "./img/bexio/code.jpg",
       "baseImage": "./img/bexio/1.jpg",
@@ -38,7 +38,7 @@
     {
       "id": 2,
       "year": "2017",
-      "link": "https://www.amorisk.com/",
+      "link": "",
       "titleProject": "GAP",
       "shortDescription": "Management System for real time dashboard solutions",
       "technologies": {
@@ -49,8 +49,7 @@
         "rightColumn": "Some of the interesting things were a calendar module in which I displayed in a modal a specifing settings on a day click with Ajax. And a huge of specific functionalites like sorting, notifications, customizes DataTables and UI components."
       },
       "imageProject": "./img/gap/code.jpg",
-      "baseImage": "./img/gap/1.jpg",
-      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
+      "relevantScreenshots": [ ]
     },
      {
       "id": 3,
@@ -67,7 +66,7 @@
       },
       "imageProject": "./img/amorisk/code.jpg",
       "relevantScreenshots": [
-        {"urlPath": "./img/amorisk/1.jpg"},{"urlPath": "./img/amorisk/2.jpg"},{"urlPath": "./img/amorisk/3.jpg"}
+        {"urlPath": "./img/amorisk/1.jpg"},{"urlPath": "./img/amorisk/2.jpg"},{"urlPath": "./img/amorisk/3.jpg"},{"urlPath": "./img/amorisk/4.jpg"}
       ]
     },
     {
@@ -83,26 +82,10 @@
         "leftColumn": "TeamGB website was made in collaboration with British Olympic Association. Their role is to lead the promotion of the Olympic Movements. This is a large-scale project that include three smaller ones for their sponsors in which I'm Front-end developer too.",
         "rightColumn": "Sytefinity is the content management sistem which ours teem used to build the site. I have been with the project since its early days. I was responsible for page building and styling, for managing different types of modules and widgets from the Sytefinity CMS. TeamGB is a fully responsive and well tested to support cross-platforms and browsers. The project contains a huge Java Script components, modular structure(reuse blocks and widgets on any page) video components and Facebook integration."
       },
-      "imageProject": "./img/tgb/code.jpg",
-      "baseImage": "./img/bexio/1.jpg",
-      "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
-    },
-    {
-      "id": 5,
-      "year": "2015",
-      "link": "http://www.us4bg.org/",
-      "titleProject": "America for Bulgaria",
-      "shortDescription": "Foundation friendship between the American and Bulgarian people-to-people contacts",
-      "technologies": {
-        "name": "Umbraco CMS, Java Script, jQuery, Bootstrap, Sass & gulp integration"
-      },
-      "projectSpecification": {
-        "leftColumn": "For the website the goal of this project was to create for collaboration with American Foundation and Bulgaria. Their role is to enhance the longstanding legacy of goodwill and friendship between US – Bulgaria people. I was responsible for integration of designer wireframes into front-end code.",
-        "rightColumn": "This project is a fully responsive and well tested to support cross-platforms and browsers.I used an User Agent to customize content with information about browser. While much of the project has already been completed, it still need additional support for new ideas."
-      },
-     "relevantScreenshots": [
-        {"urlPath": "./img/a4bg/1.jpg"}
+      "relevantScreenshots": [
+        {"urlPath": "./img/tgb/1.jpg"},{"urlPath": "./img/tgb/2.jpg"},{"urlPath": "./img/tgb/3.jpg"},{"urlPath": "./img/tgb/4.jpg"}
       ],
+      "imageProject": "./img/tgb/code.jpg",
       "baseImage": "./img/bexio/1.jpg",
       "imgUrl": "https://shantellmartin.art/media/project_block_image2/main/31021911312_d29174a155_o_201702091938_201702091938.jpg"
     }
