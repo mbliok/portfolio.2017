@@ -2,12 +2,14 @@
 @import "neat/_neat";
 @import "variables";
 @import "mixins";
-@import "carousel";
 @import "typography";
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald');
 
+/*=====================*/
+//   SLIDE MENU
+/*=====================*/
 .slide-menu {
     position: fixed;
     top: 0;
@@ -15,13 +17,8 @@
     right: 0;
     bottom: 0;
     z-index: 100;
+    background: url('../img/menu-bgr1.jpg') center / cover no-repeat fixed #000;
 
-background: 
-   url('../img/menu-bgr1.jpg') 
-    center / cover
-    no-repeat
-    fixed
-    #000;
     & .btn-hamburger--white {
         float: right;
         margin: 25px 25px 0 0;
@@ -51,6 +48,9 @@ background:
     }
 }
 
+/*=====================*/
+//   HOME SCREEN
+/*=====================*/
 #welcome-screen {
     background: $dark;
     height: 100%;
@@ -111,8 +111,9 @@ background:
         margin: 25px 0 0 25px;
     }
 }
-/* Navigation animated button
--------------------------------------------------- */
+/*=====================*/
+//   HAMBURGER BUTTON
+/*=====================*/
 %_btn-hamburger {
     position: absolute;
     width: 30px;
@@ -258,7 +259,7 @@ background:
     }
 }
 /* =======================
-   ROUTE list
+   ROUTE LINK
    ======================= */
 %_route-link {
     height: 25%;
@@ -357,96 +358,10 @@ background:
         }
     }
 }
+
 /* =======================
-   COLUMN TEMPLATE
+   WORK LIST
    ======================= */
-%_panel {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-}
-
-.panel {
-    @extend %_panel;
-
-    &--left {
-        @extend %_panel;
-        left: 0;
-        top: 0;
-    }
-
-    &--right {
-        @extend %_panel;
-        right: 0;
-        top: 0;
-    }
-}
-
-.project-list {
-    .panel {
-        &--left {
-            @extend %_panel;
-            overflow: hidden;
-
-            @include breakpoint(tablet-l) {
-                display: none;
-            }
-        }
-
-        &--right {
-            @extend %_panel;
-
-            @include breakpoint(tablet-l) {
-                width: 100%;
-                min-height: 240px;
-                bottom: 0;
-                background: $dark;
-                left: 0;
-                z-index: 20;
-                position: relative;
-            }
-        }
-    }
-}
-// animation duration
-%_fade-d {
-    -webkit-animation-delay: 500ms;
-}
-
-.fade-d {
-    @extend %_fade-d;
-
-    &--800 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 800ms;
-    }
-
-    &--1000 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 1000ms;
-    }
-
-    &--1200 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 1200ms;
-    }
-
-    &--1400 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 1400ms;
-    }
-
-    &--2000 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 2000ms;
-    }
-
-    &--3000 {
-        @extend %_fade-d;
-        -webkit-animation-duration: 3000ms;
-    }
-}
-//
 .recent-work {
     position: relative;
     width: 100%;
@@ -500,7 +415,101 @@ background:
         padding-bottom: 40px;
     }
 }
-//project detail
+/* =======================
+   COLUMNS
+   ======================= */
+%_panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.panel {
+    @extend %_panel;
+
+    &--left {
+        @extend %_panel;
+        left: 0;
+        top: 0;
+    }
+
+    &--right {
+        @extend %_panel;
+        right: 0;
+        top: 0;
+    }
+}
+
+.project-list {
+    .panel {
+        &--left {
+            @extend %_panel;
+            overflow: hidden;
+
+            @include breakpoint(tablet-l) {
+                display: none;
+            }
+        }
+
+        &--right {
+            @extend %_panel;
+
+            @include breakpoint(tablet-l) {
+                width: 100%;
+                min-height: 240px;
+                bottom: 0;
+                background: $dark;
+                left: 0;
+                z-index: 20;
+                position: relative;
+            }
+        }
+    }
+}
+/*=====================*/
+//   ANIMATION SPEED
+/*=====================*/
+%_fade-d {
+    -webkit-animation-delay: 500ms;
+}
+
+.fade-d {
+    @extend %_fade-d;
+
+    &--800 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 800ms;
+    }
+
+    &--1000 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 1000ms;
+    }
+
+    &--1200 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 1200ms;
+    }
+
+    &--1400 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 1400ms;
+    }
+
+    &--2000 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 2000ms;
+    }
+
+    &--3000 {
+        @extend %_fade-d;
+        -webkit-animation-duration: 3000ms;
+    }
+}
+
+/*=====================*/
+//   DETAIL PAGE
+/*=====================*/
 .page-details {
     background-color: $white;
 }
@@ -676,7 +685,7 @@ background:
         }
     }
 }
-//images progect
+
 .project-screens {
     background: $dark;
 
@@ -687,9 +696,6 @@ background:
     img {
         float: left;
         margin: 4px;
-
-
-
 
         @include breakpoint(md) {
             margin: 0.2%;
@@ -719,25 +725,12 @@ background:
             }
         }
     }
-
-    .owl-carousel {
-        margin-left: 24%;
-        padding-top: 2%;
-
-        .item {
-            float: left;
-            overflow: hidden;
-        }
-
-        img {
-            width: 100%;
-            position: relative;
-        }
-    }
 }
 
 
-// bio
+/*=====================*/
+//   BIO PAGE
+/*=====================*/
 .page-biography {
     background: $dark;
     color: $text;
@@ -755,21 +748,18 @@ background:
     }
 }
 
-.project-list {
-    position: relative;
+// dd list
+dl {
+    padding-left: 25px;
 
-    ul.social {
-        position: absolute;
-        right: -73px;
-        top: 26%;
+    dd {
+        color: $white;
+        display: block;
+        float: left;
+    }
 
-        li {
-            list-style-type: none;
-
-            a {
-                i {
-                }
-            }
-        }
+    dt {
+        display: block;
+        clear: right;
     }
 }

@@ -1,11 +1,7 @@
 ﻿@import "variables";
 
 @mixin breakpoint($class) {
-    /*@if $class == sm-h {
-        @media screen and (max-width: 767px), screen and (min-width: 320px) {
-            @content;
-        }
-    }*/
+
     @if $class == mobile {
         @media screen and (max-width: 767px) {
             @content;

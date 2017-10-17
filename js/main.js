@@ -1,17 +1,5 @@
-// Thank you https://stackoverflow.com/questions/4656843/jquery-get-querystring-from-url
+// https://stackoverflow.com/questions/4656843/jquery-get-querystring-from-url
 //'use strict';
-
-//var test = require('test');
-////var owlSliders = require('./modules/owlSliders');
-//var init = function () {
-//    if (!window.console) console = { log: function () { } };
-
-
-//    test.init();
-
-//};
-
-//$(document).ready(init);
 
 function getProjectById(name, url) {
     if (!url) url = window.location.href;
@@ -41,26 +29,27 @@ Handlebars.registerHelper("toUpper", function (options) {
 
 
 $(document).ready(function () {
-
-
-    // create referanxce to list template
+    // create referance to list template
     var projectsTemplate = $('#project-template').html();
     var compiledTemplate = Handlebars.compile(projectsTemplate);
     var $projectsList = $('.project-list')
     var projectId = getProjectById("id");
     console.log(projectId + 'is the prj id')
 
-    $.ajax('./data/projects.json').done(function (data) {
-        console.log(data);
-        if ($('body').hasClass('page-details')) {
-            $projectsList.html(compiledTemplate(data.projects[projectId]))
-
-        } else {
-            $projectsList.html(compiledTemplate(data))
+    $.ajax({
+        type: 'GET',
+        url: './data/projects.json',
+        dataType: 'json',
+        success:function (data) {
+            console.log(data);
+            if ($('body').hasClass('page-details')) {
+                $projectsList.html(compiledTemplate(data.projects[projectId]))
+            } else {
+                $projectsList.html(compiledTemplate(data))
+            }
         }
-
-    })
-
+    });
+    
 
     $('body').on('click', '.btn-hamburger--white', function () {
         $(this).toggleClass('collapsed', 1000);

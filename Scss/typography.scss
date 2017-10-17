@@ -3,17 +3,6 @@
 
 
 @font-face {
-    font-family: 'motion_control';
-    src: url('../Fonts/motion-control/MotionControl-Bold.eot');
-    /*src: url('../Fonts/motion-control/MotionControl-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../Fonts/motion-control/MotionControl-Bold.woff') format('woff'),
-         url('../Fonts/motion-control/MotionControl-Bold.ttf') format('truetype'),
-         url('../Fonts/motion-control/MotionControl-Bold.svg#motion_control') format('svg');*/
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'gothman_bgbold';
     src: url('../Fonts/gothman/Gotham-Bold.eot');
     src: url('../Fonts/gothman/Gotham-Bold.eot?#iefix') format('embedded-opentype'), url('../Fonts/gothman/Gotham-Bold.woff') format('woff'), url('../Fonts/gothman/Gotham-Bold.ttf') format('truetype'), url('../Fonts/gothman/Gotham-Boldt.svg#gothman_bgbold') format('svg');
@@ -35,9 +24,6 @@
     background: #fff;
     z-index: 999;
 
-
-
-
     @include breakpoint(lg) {
         background: violet;
     }
@@ -57,7 +43,6 @@
     @include breakpoint(mobile) {
         background: red;
     }
-
 }
 
 body, html {
@@ -105,13 +90,9 @@ img {
 .text-white {
     color: $white;
 }
-.text-gray{
-color:$text-gray;
-}
-.text-gradient {
-    background: -webkit-linear-gradient(#fff, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.text-gray {
+    color: $text-gray;
 }
 
 .relative {
@@ -132,7 +113,6 @@ color:$text-gray;
 .cfix {
     zoom: 1;
 }
-
 
 .capitalize {
     text-transform: capitalize;
