@@ -75,6 +75,10 @@ img {
 
 .text-white {
   color: #fff; }
+  .text-white a {
+    color: #fff; }
+    .text-white a:hover, .text-white a:focus, .text-white a:active {
+      color: #545454; }
 
 .text-gray {
   color: #545454; }
@@ -172,25 +176,29 @@ h1, h2, h3, h4, h5 {
       text-transform: uppercase;
       color: #fff;
       letter-spacing: 90px; }
+      #welcome-screen .home h2 span {
+        font-size: 12px;
+        display: block;
+        letter-spacing: 12px; }
       @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
         #welcome-screen .home h2 {
           font-size: 52px;
           letter-spacing: 70px; } }
       @media screen and (max-width: 1024px) {
         #welcome-screen .home h2 {
-          font-size: 32px;
+          font-size: 34px;
           letter-spacing: 42px; } }
       @media screen and (max-width: 767px) {
         #welcome-screen .home h2 {
-          font-size: 20px;
+          font-size: 32px;
           letter-spacing: 16px; } }
-  #welcome-screen .btn-hamburger--dark {
-    margin: 25px 0 0 25px; }
+  #welcome-screen .btn-hamburger--white {
+    margin: 25px 0 0 25px;
+    display: block; }
 
 /*=====================*/
 /*=====================*/
 .btn-hamburger, .btn-hamburger--white, .btn-hamburger--dark {
-  position: absolute;
   width: 30px;
   height: 30px;
   background: none;
@@ -199,9 +207,9 @@ h1, h2, h3, h4, h5 {
   .btn-hamburger .icon-bar, .btn-hamburger--white .icon-bar, .btn-hamburger--dark .icon-bar {
     width: 30px;
     transition: all 0.2s;
-    height: 4px;
+    height: 1px;
     border-radius: 0;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
     display: block; }
   .btn-hamburger .top-bar, .btn-hamburger--white .top-bar, .btn-hamburger--dark .top-bar {
     transform: rotate(45deg);
@@ -424,7 +432,7 @@ h1, h2, h3, h4, h5 {
 /*=====================*/
 /*=====================*/
 .fade-d, .fade-d--800, .fade-d--1000, .fade-d--1200, .fade-d--1400, .fade-d--2000, .fade-d--3000 {
-  -webkit-animation-delay: 500ms; }
+  -webkit-animation-duration: 500ms; }
 
 .fade-d--800 {
   -webkit-animation-duration: 800ms; }
@@ -460,7 +468,8 @@ h1, h2, h3, h4, h5 {
 .year {
   display: block;
   font-size: 14px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  color: #a39a7f; }
 
 .project-header {
   height: 100vh;
@@ -528,10 +537,11 @@ h1, h2, h3, h4, h5 {
     @media screen and (max-width: 1024px) {
       .project-header .table-center {
         padding: 0 40px 10px 40px; } }
-  .project-header .btn-hamburger--dark {
-    position: fixed;
-    left: 26px;
-    top: 25px; }
+  .project-header a {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    z-index: 100; }
 
 .project-description {
   padding: 80px 40px;
@@ -607,11 +617,12 @@ h1, h2, h3, h4, h5 {
   background: #000;
   color: #747474;
   height: 100%;
+  width: 100%;
   display: table; }
   .page-biography .text-bio {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 20%; }
+    padding: 50px 20%; }
     .page-biography .text-bio p:first-child {
       margin-left: -18%; }
 
@@ -620,7 +631,10 @@ dl {
   dl dd {
     color: #fff;
     display: block;
-    float: left; }
+    float: left;
+    min-width: 20%;
+    text-align: right;
+    padding-right: 2%; }
   dl dt {
     display: block;
     clear: right; }

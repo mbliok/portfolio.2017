@@ -67,6 +67,10 @@ img {
 
 .text-white {
   color: #fff; }
+  .text-white a {
+    color: #fff; }
+    .text-white a:hover, .text-white a:focus, .text-white a:active {
+      color: #545454; }
 
 .text-gray {
   color: #545454; }

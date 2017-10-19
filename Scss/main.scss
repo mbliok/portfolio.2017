@@ -90,32 +90,38 @@
             color: $white;
             letter-spacing: 90px;
 
+            span {
+                font-size: 12px;
+                display: block;
+                letter-spacing: 12px;
+            }
+
             @include breakpoint(md) {
                 font-size: 52px;
                 letter-spacing: 70px;
             }
 
             @include breakpoint(tablet-l) {
-                font-size: 32px;
+                font-size: 34px;
                 letter-spacing: 42px;
             }
 
             @include breakpoint(mobile) {
-                font-size: 20px;
+                font-size: 32px;
                 letter-spacing: 16px;
             }
         }
     }
 
-    & .btn-hamburger--dark {
+    & .btn-hamburger--white {
         margin: 25px 0 0 25px;
+        display: block;
     }
 }
 /*=====================*/
 //   HAMBURGER BUTTON
 /*=====================*/
 %_btn-hamburger {
-    position: absolute;
     width: 30px;
     height: 30px;
     background: none;
@@ -125,9 +131,9 @@
     .icon-bar {
         width: 30px;
         transition: all 0.2s;
-        height: 4px;
+        height: 1px;
         border-radius: 0;
-        margin-bottom: 4px;
+        margin-bottom: 7px;
         display: block;
     }
 
@@ -227,7 +233,6 @@
     &--primary {
         @extend %_btn-component;
 
-
         &:hover {
             background: #000;
             color: $white;
@@ -322,19 +327,19 @@
 
     &--home {
         @extend %_route-link;
-        -webkit-animation-duration: 800ms;
+         @include animateDuration(800ms);
         text-align: right;
         width: 100%;
     }
 
     &--work {
         @extend %_route-link;
-        -webkit-animation-duration: 1000ms;
+        @include animateDuration(1000ms);
     }
 
     &--bio {
         @extend %_route-link;
-        -webkit-animation-duration: 1200ms;
+        @include animateDuration(1200ms);
         text-align: right;
         width: 100%;
 
@@ -346,7 +351,7 @@
 
     &--info {
         @extend %_route-link;
-        -webkit-animation-duration: 1400ms;
+        @include animateDuration(1400ms);
     }
 
     &--home, &--work, &--bio, &--info {
@@ -470,7 +475,7 @@
 //   ANIMATION SPEED
 /*=====================*/
 %_fade-d {
-    -webkit-animation-delay: 500ms;
+    @include animateDuration(500ms);
 }
 
 .fade-d {
@@ -478,22 +483,22 @@
 
     &--800 {
         @extend %_fade-d;
-        -webkit-animation-duration: 800ms;
+        @include animateDuration(800ms);
     }
 
     &--1000 {
         @extend %_fade-d;
-        -webkit-animation-duration: 1000ms;
+        @include animateDuration(1000ms);
     }
 
     &--1200 {
         @extend %_fade-d;
-        -webkit-animation-duration: 1200ms;
+        @include animateDuration(1200ms);
     }
 
     &--1400 {
         @extend %_fade-d;
-        -webkit-animation-duration: 1400ms;
+        @include animateDuration(1400ms);
     }
 
     &--2000 {
@@ -503,7 +508,7 @@
 
     &--3000 {
         @extend %_fade-d;
-        -webkit-animation-duration: 3000ms;
+        @include animateDuration(3000ms);
     }
 }
 
@@ -528,6 +533,7 @@
     display: block;
     font-size: 14px;
     padding-bottom: 10px;
+    color: #a39a7f;
 }
 
 .project-header {
@@ -619,10 +625,11 @@
         }
     }
 
-    & .btn-hamburger--dark {
-        position: fixed;
-        left: 26px;
-        top: 25px;
+    a {
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        z-index: 100;
     }
 }
 
@@ -735,12 +742,13 @@
     background: $dark;
     color: $text;
     height: 100%;
+    width: 100%;
     display: table;
 
     .text-bio {
         display: table-cell;
         vertical-align: middle;
-        padding: 0 20%;
+        padding: 50px 20%;
 
         & p:first-child {
             margin-left: -18%;
@@ -756,6 +764,9 @@ dl {
         color: $white;
         display: block;
         float: left;
+        min-width: 20%;
+        text-align: right;
+        padding-right: 2%;
     }
 
     dt {

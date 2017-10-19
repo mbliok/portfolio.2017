@@ -46,6 +46,9 @@
         clear: both;
     }
 }
+@mixin animateDuration($speed) {
+    -webkit-animation-duration: $speed;
+    }
 
 @mixin customTransition($x, $y, $time) {
     -webkit-transition-duration: $time;
