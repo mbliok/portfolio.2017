@@ -10,6 +10,7 @@
     <title>Works</title>
     <!-- Animiate css  CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland" rel="stylesheet">
     <!-- Compiled scss  -->
     <link href="Styles/main.css" rel="stylesheet">
 </head>
@@ -17,32 +18,32 @@
 <body>
     <p class="mq">mq</p>
     <div class="slide-menu">
-        <aside class="panel--left">
-            <div class="route-link--home animated  slideInDown">
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
-            </div>
-            <div class="route-link--work animated  slideInDown">
-                <a href="details.html?id=0">
-                    <h2>Work</h2>
-                </a>
-            </div>
-            <div class="route-link--bio animated  slideInDown">
-                <a href="contact.html">
-                    <h2>Contact</h2>
-                </a>
-            </div>
-            <div class="route-link--info animated  slideInDown">
-                <a href="bio.html">
-                    <h2>Bio</h2>
-                </a>
-            </div>
-        </aside>
-        <aside class="panel--right">
+        <section class="panel--full">
+            <nav class="menu">
+                <div class="route-link--home animated  slideInDown">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="route-link--work animated  slideInDown">
+                    <a href="details.html?id=0">
+                       Works
+                    </a>
+                </div>
+                <div class="route-link--bio animated  slideInDown">
+                    <a href="contact.html">
+                       Contact
+                    </a>
+                </div>
+                <div class="route-link--info animated  slideInDown">
+                    <a href="bio.html">
+                       Bio
+                    </a>
+                </div>
+            </nav>
             <div class="recent-work fade-d--2000 animated fadeIn">
-                <div class="list">
-                    <h4 class="title">Recent Work</h4>
+                <div class="table-list">
+                    <h4 class="title dafont">Recent Work</h4>
 
                     <ul class="project-list"></ul>
 
@@ -58,7 +59,7 @@
                     </script>
                 </div>
             </div>
-        </aside>
+        </section>
     </div>
 
     <!-- Handlebars -->

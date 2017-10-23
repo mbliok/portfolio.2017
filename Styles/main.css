@@ -7,13 +7,6 @@ html {
   box-sizing: inherit; }
 
 @font-face {
-  font-family: 'gothman_bgbold';
-  src: url("../Fonts/gothman/Gotham-Bold.eot");
-  src: url("../Fonts/gothman/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../Fonts/gothman/Gotham-Bold.woff") format("woff"), url("../Fonts/gothman/Gotham-Bold.ttf") format("truetype"), url("../Fonts/gothman/Gotham-Boldt.svg#gothman_bgbold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'gothman_book';
   src: url("../Fonts/gothman-book/Gotham-Book.eot");
   src: url("../Fonts/gothman-book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../Fonts/gothman-book/Gotham-Book.woff") format("woff"), url("../Fonts/gothman-book/Gotham-Book.ttf") format("truetype"), url("../Fonts/gothman-book/Gotham-Book.svg#gothman_book") format("svg");
@@ -23,7 +16,8 @@ html {
 .mq {
   position: fixed;
   background: #fff;
-  z-index: 999; }
+  z-index: 999;
+  display: none; }
   @media screen and (max-width: 1280px) {
     .mq {
       background: violet; } }
@@ -52,7 +46,11 @@ body, html {
   @media screen and (max-width: 767px) {
     body, html {
       font-size: 13px;
-      line-height: 16px; } }
+      line-height: 20px; } }
+
+@media screen and (max-height: 600px) {
+  .slide-menu {
+    overflow-y: auto; } }
 
 /*=====================*/
 /*=====================*/
@@ -133,14 +131,14 @@ h1, h2, h3, h4, h5 {
     @media screen and (max-width: 767px) {
       .slide-menu .panel--left {
         width: 100%;
-        height: 30%; } }
+        height: 15%; } }
   .slide-menu .panel--right {
     overflow-x: hidden; }
     @media screen and (max-width: 767px) {
       .slide-menu .panel--right {
         width: 100%;
         top: auto;
-        height: 70%;
+        height: 87%;
         bottom: 0; } }
 
 /*=====================*/
@@ -150,13 +148,20 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   display: table;
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #welcome-screen .text-for-you {
     position: absolute;
     width: 80%;
     left: 50%;
     margin-left: -40%;
     bottom: 15%; }
+  #welcome-screen img {
+    position: absolute;
+    z-index: 20;
+    width: 31%;
+    right: 17%;
+    top: 5%; }
   #welcome-screen .home {
     display: table-cell;
     width: 100%;
@@ -164,7 +169,7 @@ h1, h2, h3, h4, h5 {
     #welcome-screen .home:before {
       content: '';
       width: 100%;
-      border-bottom: solid 1px #fff;
+      border-bottom: solid 1px #c3bfe4;
       position: absolute;
       left: 0;
       top: 50%;
@@ -173,13 +178,14 @@ h1, h2, h3, h4, h5 {
       font-size: 62px;
       position: relative;
       text-align: center;
-      text-transform: uppercase;
-      color: #fff;
-      letter-spacing: 90px; }
+      color: #c3bfe4;
+      letter-spacing: 70px; }
       #welcome-screen .home h2 span {
+        font-family: 'gothman_book';
         font-size: 12px;
         display: block;
-        letter-spacing: 12px; }
+        letter-spacing: 12px;
+        color: #fff; }
       @media screen and (max-width: 1366px), screen and (max-width: 1280px), screen and (max-width: 1366px) {
         #welcome-screen .home h2 {
           font-size: 52px;
@@ -284,63 +290,51 @@ h1, h2, h3, h4, h5 {
     color: #fff; }
 
 /* =======================
-   ROUTE LINK
+   NAV - ROUTE LINK
    ======================= */
+nav {
+  margin: 15px;
+  float: right; }
+  @media screen and (max-width: 767px) {
+    nav {
+      float: none; } }
+
 .route-link, .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
-  height: 25%;
-  width: 50%;
-  font-family: 'Oswald', sans-serif; }
+  margin: 0 15px; }
   @media screen and (max-width: 767px) {
     .route-link, .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
       width: auto;
-      margin: 15px; } }
+      margin: 9px; } }
   .route-link a, .route-link--home a, .route-link--work a, .route-link--bio a, .route-link--info a {
-    color: #2c2a24;
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 7px;
+    text-transform: uppercase;
     text-decoration: none;
-    text-transform: uppercase; }
-    @media screen and (max-width: 767px) {
-      .route-link a, .route-link--home a, .route-link--work a, .route-link--bio a, .route-link--info a {
-        color: #fff;
-        text-transform: none;
-        font-family: 'Open Sans Condensed', sans-serif;
-        letter-spacing: 7px; }
-        .route-link a:before, .route-link--home a:before, .route-link--work a:before, .route-link--bio a:before, .route-link--info a:before {
-          background: #fff;
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          visibility: hidden;
-          transform: scaleX(0);
-          transition: .25s linear; }
-        .route-link a:hover:before, .route-link--home a:hover:before, .route-link--work a:hover:before, .route-link--bio a:hover:before, .route-link--info a:hover:before, .route-link a:focus:before, .route-link--home a:focus:before, .route-link--work a:focus:before, .route-link--bio a:focus:before, .route-link--info a:focus:before {
-          visibility: visible;
-          transform: scaleX(1); } }
-    .route-link a h2, .route-link--home a h2, .route-link--work a h2, .route-link--bio a h2, .route-link--info a h2 {
-      font-size: 26vh;
-      font-weight: 600;
-      margin: 0;
-      display: inline;
-      font-family: 'Oswald Light', sans-serif; }
-      @media screen and (max-width: 767px) {
-        .route-link a h2, .route-link--home a h2, .route-link--work a h2, .route-link--bio a h2, .route-link--info a h2 {
-          font-size: 12px;
-          font-weight: 400; } }
+    font-size: 12px; }
+    .route-link a:before, .route-link--home a:before, .route-link--work a:before, .route-link--bio a:before, .route-link--info a:before {
+      background: #fff;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: .25s linear; }
+    .route-link a:hover:before, .route-link--home a:hover:before, .route-link--work a:hover:before, .route-link--bio a:hover:before, .route-link--info a:hover:before, .route-link a:focus:before, .route-link--home a:focus:before, .route-link--work a:focus:before, .route-link--bio a:focus:before, .route-link--info a:focus:before {
+      visibility: visible;
+      transform: scaleX(1); }
 
 .route-link--home {
-  -webkit-animation-duration: 800ms;
-  text-align: right;
-  width: 100%; }
+  -webkit-animation-duration: 800ms; }
 
 .route-link--work {
   -webkit-animation-duration: 1000ms; }
 
 .route-link--bio {
-  -webkit-animation-duration: 1200ms;
-  text-align: right;
-  width: 100%; }
+  -webkit-animation-duration: 1200ms; }
   @media screen and (max-width: 767px) {
     .route-link--bio {
       width: auto;
@@ -349,12 +343,12 @@ h1, h2, h3, h4, h5 {
 .route-link--info {
   -webkit-animation-duration: 1400ms; }
 
-@media screen and (max-width: 767px) {
-  .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
-    width: auto;
-    text-align: center;
-    height: auto;
-    float: left; } }
+.route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+  text-align: center;
+  float: left; }
+  @media screen and (max-width: 767px) {
+    .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+      float: none; } }
 
 /* =======================
    WORK LIST
@@ -365,8 +359,7 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   display: table; }
   .recent-work h4 {
-    color: gray;
-    font-family: 'Open Sans Condensed', sans-serif; }
+    color: #c3bfe4; }
   .recent-work ul li a {
     position: relative;
     display: inline-block;
@@ -390,17 +383,21 @@ h1, h2, h3, h4, h5 {
     .recent-work ul li a:hover {
       text-decoration: none;
       color: #545454; }
-  .recent-work .list {
+  .recent-work .table-list {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     font-size: 16px;
     padding-bottom: 40px; }
+    @media screen and (max-width: 767px) {
+      .recent-work .table-list {
+        vertical-align: top;
+        padding-top: 24px; } }
 
 /* =======================
    COLUMNS
    ======================= */
-.panel, .panel--left, .panel--right, .project-list .panel--left, .project-list .panel--right {
+.panel, .panel--left, .panel--right, .panel--full, .project-list .panel--left, .project-list .panel--right {
   position: absolute;
   width: 50%;
   height: 100%; }
@@ -412,6 +409,9 @@ h1, h2, h3, h4, h5 {
 .panel--right {
   right: 0;
   top: 0; }
+
+.panel--full {
+  width: 100%; }
 
 .project-list .panel--left {
   overflow: hidden; }
@@ -428,6 +428,9 @@ h1, h2, h3, h4, h5 {
     left: 0;
     z-index: 20;
     position: relative; } }
+
+.project-list li {
+  list-style-type: none; }
 
 /*=====================*/
 /*=====================*/
@@ -469,7 +472,7 @@ h1, h2, h3, h4, h5 {
   display: block;
   font-size: 14px;
   padding-bottom: 10px;
-  color: #a39a7f; }
+  color: #fff; }
 
 .project-header {
   height: 100vh;
@@ -623,11 +626,20 @@ h1, h2, h3, h4, h5 {
     display: table-cell;
     vertical-align: middle;
     padding: 50px 20%; }
+    @media screen and (max-width: 767px) {
+      .page-biography .text-bio {
+        padding: 100px 5% 50px 18%; } }
     .page-biography .text-bio p:first-child {
       margin-left: -18%; }
+  .page-biography nav {
+    position: absolute;
+    right: 15px; }
+    @media screen and (max-width: 767px) {
+      .page-biography nav .route-link--home, .page-biography nav .route-link--work, .page-biography nav .route-link--bio, .page-biography nav .route-link--info {
+        float: left; } }
 
 dl {
-  padding-left: 25px; }
+  padding: 0 25px 25px 0; }
   dl dd {
     color: #fff;
     display: block;
@@ -638,3 +650,13 @@ dl {
   dl dt {
     display: block;
     clear: right; }
+
+.dafont {
+  font-family: 'Mr De Haviland', cursive; }
+
+.img-cv {
+  border: 1px solid #fff;
+  display: inline-block;
+  margin: 15px 0 300px; }
+  .img-cv img {
+    margin: 7px 7px 0 7px; }

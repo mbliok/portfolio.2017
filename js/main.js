@@ -40,7 +40,7 @@ $(document).ready(function () {
         type: 'GET',
         url: './data/projects.json',
         dataType: 'json',
-        success:function (data) {
+        success: function (data) {
             console.log(data);
             if ($('body').hasClass('page-details')) {
                 $projectsList.html(compiledTemplate(data.projects[projectId]))
@@ -49,7 +49,7 @@ $(document).ready(function () {
             }
         }
     });
-    
+
 
     $('body').on('click', '.btn-hamburger--white', function () {
         $(this).toggleClass('collapsed', 1000);

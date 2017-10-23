@@ -31,7 +31,7 @@
 
             @include breakpoint(mobile) {
                 width: 100%;
-                height: 30%;
+                height: 15%;
             }
         }
 
@@ -41,7 +41,7 @@
             @include breakpoint(mobile) {
                 width: 100%;
                 top: auto;
-                height: 70%;
+                height: 87%;
                 bottom: 0;
             }
         }
@@ -57,6 +57,7 @@
     display: table;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     & .text-for-you {
         position: absolute;
@@ -64,6 +65,14 @@
         left: 50%;
         margin-left: -40%;
         bottom: 15%;
+    }
+
+    img {
+        position: absolute;
+        z-index: 20;
+        width: 31%;
+        right: 17%;
+        top: 5%;
     }
 
     & .home {
@@ -74,7 +83,7 @@
         &:before {
             content: '';
             width: 100%;
-            border-bottom: solid 1px $white;
+            border-bottom: solid 1px $purple;
             position: absolute;
             left: 0;
             top: 50%;
@@ -86,14 +95,15 @@
             font-size: 62px;
             position: relative;
             text-align: center;
-            text-transform: uppercase;
-            color: $white;
-            letter-spacing: 90px;
+            color: $purple;
+            letter-spacing: 70px;
 
             span {
+                font-family: 'gothman_book';
                 font-size: 12px;
                 display: block;
                 letter-spacing: 12px;
+                color: $white;
             }
 
             @include breakpoint(md) {
@@ -264,60 +274,53 @@
     }
 }
 /* =======================
-   ROUTE LINK
+   NAV - ROUTE LINK
    ======================= */
+nav {
+    margin: 15px;
+    float: right;
+
+    @include breakpoint(mobile) {
+        float: none;
+    }
+}
+
 %_route-link {
-    height: 25%;
-    width: 50%;
-    font-family: 'Oswald', sans-serif;
+    margin: 0 15px;
 
     @include breakpoint(mobile) {
         width: auto;
-        margin: 15px;
+        margin: 9px;
     }
 
     a {
-        color: #2c2a24;
-        text-decoration: none;
+        color: $white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 7px;
         text-transform: uppercase;
+        text-decoration: none;
+        font-size: 12px;
 
-        @include breakpoint(mobile) {
-            color: $white;
-            text-transform: none;
-            font-family: 'Open Sans Condensed', sans-serif;
-            letter-spacing: 7px;
-
-            &:before {
-                background: $white;
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 1px;
-                bottom: 0;
-                left: 0;
-                visibility: hidden;
-                transform: scaleX(0);
-                transition: .25s linear;
-            }
-
-            &:hover:before,
-            &:focus:before {
-                visibility: visible;
-                transform: scaleX(1);
-            }
+        &:before {
+            background: $white;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: .25s linear;
         }
 
-        h2 {
-            font-size: 26vh;
-            font-weight: 600;
-            margin: 0;
-            display: inline;
-            font-family: 'Oswald Light', sans-serif;
+        &:hover:before,
+        &:focus:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
 
-            @include breakpoint(mobile) {
-                font-size: 12px;
-                font-weight: 400;
-            }
+        @include breakpoint(mobile) {
         }
     }
 }
@@ -327,9 +330,7 @@
 
     &--home {
         @extend %_route-link;
-         @include animateDuration(800ms);
-        text-align: right;
-        width: 100%;
+        @include animateDuration(800ms);
     }
 
     &--work {
@@ -340,8 +341,7 @@
     &--bio {
         @extend %_route-link;
         @include animateDuration(1200ms);
-        text-align: right;
-        width: 100%;
+
 
         @include breakpoint(mobile) {
             width: auto;
@@ -355,11 +355,11 @@
     }
 
     &--home, &--work, &--bio, &--info {
+        text-align: center;
+        float: left;
+
         @include breakpoint(mobile) {
-            width: auto;
-            text-align: center;
-            height: auto;
-            float: left;
+            float: none;
         }
     }
 }
@@ -374,8 +374,7 @@
     display: table;
 
     h4 {
-        color: gray;
-        font-family: 'Open Sans Condensed', sans-serif;
+        color: $purple;
     }
 
     ul {
@@ -412,12 +411,17 @@
         }
     }
 
-    & .list {
+    & .table-list {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         font-size: 16px;
         padding-bottom: 40px;
+
+        @include breakpoint(mobile) {
+            vertical-align: top;
+            padding-top: 24px;
+        }
     }
 }
 /* =======================
@@ -442,6 +446,11 @@
         @extend %_panel;
         right: 0;
         top: 0;
+    }
+
+    &--full {
+        @extend %_panel;
+        width: 100%;
     }
 }
 
@@ -469,6 +478,10 @@
                 position: relative;
             }
         }
+    }
+
+    li {
+        list-style-type: none;
     }
 }
 /*=====================*/
@@ -533,7 +546,7 @@
     display: block;
     font-size: 14px;
     padding-bottom: 10px;
-    color: #a39a7f;
+    color: $white;
 }
 
 .project-header {
@@ -750,15 +763,33 @@
         vertical-align: middle;
         padding: 50px 20%;
 
+        @include breakpoint(mobile) {
+            padding: 100px 5% 50px 18%;
+        }
+
         & p:first-child {
             margin-left: -18%;
+        }
+    }
+
+    nav {
+        position: absolute;
+        right: 15px;
+
+        .route-link--home, .route-link--work, .route-link--bio, .route-link--info {
+            @include breakpoint(mobile) {
+                float: left;
+            }
+        }
+
+        @include breakpoint(mobile) {
         }
     }
 }
 
 // dd list
 dl {
-    padding-left: 25px;
+    padding: 0 25px 25px 0;
 
     dd {
         color: $white;
@@ -772,5 +803,19 @@ dl {
     dt {
         display: block;
         clear: right;
+    }
+}
+
+.dafont {
+    font-family: 'Mr De Haviland', cursive;
+}
+
+.img-cv {
+    border: 1px solid $white;
+    display: inline-block;
+    margin: 15px 0 300px;
+
+    img {
+        margin: 7px 7px 0 7px;
     }
 }
